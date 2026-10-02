@@ -15,13 +15,14 @@
             "title": "This is the true story of Bob",
             "summary": "Bob, 23 rotations around the sun. 3 pimple marks from a rough hormonal puberty. Owner of a pen and an empty wallet. Nothing else to declare.",
             "content_html": "<p>Bob, 23 rotations around the sun. 3 pimple marks from a rough hormonal puberty. Owner of a pen and an empty wallet. Nothing else to declare.</p>",
+            "image": "https://clapis.github.io/soulhug/media/posts/1/bartleby-1.png",
             "author": {
                 "name": "Jared Arabica"
             },
             "tags": [
             ],
             "date_published": "2026-10-02T11:57:21+02:00",
-            "date_modified": "2026-10-02T11:57:21+02:00"
+            "date_modified": "2026-10-02T12:10:00+02:00"
         }
     ]
 }

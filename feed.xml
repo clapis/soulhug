@@ -3,7 +3,7 @@
     <title>Coffee bits</title>
     <link href="https://clapis.github.io/soulhug/feed.xml" rel="self" />
     <link href="https://clapis.github.io/soulhug" />
-    <updated>2026-10-02T11:57:21+02:00</updated>
+    <updated>2026-10-02T12:10:00+02:00</updated>
     <author>
         <name>Jared Arabica</name>
     </author>
@@ -16,15 +16,18 @@
         </author>
         <link href="https://clapis.github.io/soulhug/this-is-the-true-story-of-bob.html"/>
         <id>https://clapis.github.io/soulhug/this-is-the-true-story-of-bob.html</id>
+        <media:content url="https://clapis.github.io/soulhug/media/posts/1/bartleby-1.png" medium="image" />
 
         <updated>2026-10-02T11:57:21+02:00</updated>
             <summary type="html">
                 <![CDATA[
+                        <img src="https://clapis.github.io/soulhug/media/posts/1/bartleby-1.png" alt="" />
                     Bob, 23 rotations around the sun. 3 pimple marks from a rough hormonal puberty. Owner of a pen and an empty wallet. Nothing else to declare.
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://clapis.github.io/soulhug/media/posts/1/bartleby-1.png" class="type:primaryImage" alt="" /></p>
                 <p>Bob, 23 rotations around the sun. 3 pimple marks from a rough hormonal puberty. Owner of a pen and an empty wallet. Nothing else to declare.</p>
             ]]>
         </content>
