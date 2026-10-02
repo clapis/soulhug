@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>Coffee bits</title>
+    <link href="https://clapis.github.io/soulhug/feed.xml" rel="self" />
+    <link href="https://clapis.github.io/soulhug" />
+    <updated>2026-10-02T11:57:21+02:00</updated>
+    <author>
+        <name>Jared Arabica</name>
+    </author>
+    <id>https://clapis.github.io/soulhug</id>
+
+    <entry>
+        <title>This is the true story of Bob</title>
+        <author>
+            <name>Jared Arabica</name>
+        </author>
+        <link href="https://clapis.github.io/soulhug/this-is-the-true-story-of-bob.html"/>
+        <id>https://clapis.github.io/soulhug/this-is-the-true-story-of-bob.html</id>
+
+        <updated>2026-10-02T11:57:21+02:00</updated>
+            <summary type="html">
+                <![CDATA[
+                    Bob, 23 rotations around the sun. 3 pimple marks from a rough hormonal puberty. Owner of a pen and an empty wallet. Nothing else to declare.
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Bob, 23 rotations around the sun. 3 pimple marks from a rough hormonal puberty. Owner of a pen and an empty wallet. Nothing else to declare.</p>
+            ]]>
+        </content>
+    </entry>
+</feed>
