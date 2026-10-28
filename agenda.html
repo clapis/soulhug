@@ -1,0 +1,270 @@
+<section class="agenda">
+    <div id="upcoming" class="agenda-list">
+        <!-- Upcoming events will be injected here -->
+    </div>
+
+    <a href="#" id="toggle-archive">See past events</a>
+
+    <div id="archive" class="agenda-list" style="display: none;">
+        <!-- Past events will be injected here -->
+    </div>
+</section>
+
+<style>
+    .agenda {
+        font-family: var(--font-libre-franklin);
+    }
+
+    .agenda-list {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .agenda-item {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        background: #f9f9f9;
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .agenda-image {
+        width: 120px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+
+    .agenda-content {
+        flex: 1;
+    }
+
+    .agenda-date,
+    .agenda-recurrence {
+        display: block;
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 0.25rem;
+    }
+
+    .agenda-heading {
+        font-size: 1.2rem;
+        margin: 0 0 0.25rem;
+        min-width: 250px;
+    }
+
+    .agenda-link {
+        font-size: 0.9rem;
+        color: #0073e6;
+        text-decoration: none;
+    }
+
+    .agenda-link:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+        .agenda-item {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .agenda-image {
+            width: 100%;
+            height: 150px;
+        }
+    }
+
+    #toggle-archive {
+        display: block;
+        text-align: center;
+        margin: 36px auto;
+        font-size: 0.9rem;
+        color: #f5f5f5;
+    }
+
+    #archive .agenda-item {
+        opacity: 0.5;
+    }
+
+</style>
+
+<script>
+    const events = [
+    {
+        title: "Free Mindful Walk",
+        date: "2025-11-09",
+        image: "https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0OTUyODh8MHwxfHNlYXJjaHwxMnx8bmF0dXJlJTIwd2Fsa3xlbnwwfDB8fHwxNzU2OTkyOTc2fDA&ixlib=rb-4.1.0&q=80&w=1080&w=1400&q=80&auto=format&dpr=2&fit=clip",
+        link: "https://hipsy.nl/event/156549-mindful-walk"
+    },
+    {
+        title: "Yoga & Art for Self-Discovery",
+        date: "2025-11-22",
+        image: "https://cdn.hipsy.nl/images/events/156539-b6fdc377-2886-4dd3-bf12-fd05036856fe.jpg",
+        link: "https://hipsy.nl/event/156539-yoga-art-for-self-discovery"
+    },
+    {
+        title: "Yoga & Art for Self-Discovery",
+        date: "2025-12-07",
+        image: "https://cdn.hipsy.nl/images/events/156539-b6fdc377-2886-4dd3-bf12-fd05036856fe.jpg",
+        link: "https://www.momoyoga.com/studionatuurlijk/lesson/28443552/Special-Creative-Yoga-for-Self-Discovery"
+    },
+    {
+        title: "Free Mindful Walk",
+        date: "2025-12-13",
+        image: "https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0OTUyODh8MHwxfHNlYXJjaHwxMnx8bmF0dXJlJTIwd2Fsa3xlbnwwfDB8fHwxNzU2OTkyOTc2fDA&ixlib=rb-4.1.0&q=80&w=1080&w=1400&q=80&auto=format&dpr=2&fit=clip",
+        link: "https://hipsy.nl/event/168698-free-mindful-walk-in-nature"
+    },
+    {
+        title: "Find Balance this Holiday Season",
+        date: "2025-12-14",
+        image: "https://cdn.hipsy.nl/images/events/165965-72a0745b-00cf-4076-938d-89c911437cf2.jpg",
+        link: "https://hipsy.nl/event/165965-find-balance-this-holiday-season-creative-self-exploration-workshop"
+    },
+    {
+        title: "Free Mindful Walk",
+        date: "2026-01-10",
+        image: "https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0OTUyODh8MHwxfHNlYXJjaHwxMnx8bmF0dXJlJTIwd2Fsa3xlbnwwfDB8fHwxNzU2OTkyOTc2fDA&ixlib=rb-4.1.0&q=80&w=1080&w=1400&q=80&auto=format&dpr=2&fit=clip",
+        link: "https://hipsy.nl/event/168727-free-mindful-walk-in-nature"
+    },
+    {
+        title: "Find your Path into the NY",
+        date: "2026-01-11",
+        image: "https://cdn.hipsy.nl/images/events/165965-72a0745b-00cf-4076-938d-89c911437cf2.jpg",
+        link: "https://hipsy.nl/event/166019-find-your-path-into-the-ny-creative-self-exploration-workshop"
+    },
+    {
+        title: "Free Mindful Walk",
+        date: "2026-03-14",
+        image: "https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0OTUyODh8MHwxfHNlYXJjaHwxMnx8bmF0dXJlJTIwd2Fsa3xlbnwwfDB8fHwxNzU2OTkyOTc2fDA&ixlib=rb-4.1.0&q=80&w=1080&w=1400&q=80&auto=format&dpr=2&fit=clip",
+        link: "https://hipsy.nl/event/191431-free-mindful-walk-in-nature"
+    },
+    {
+        title: "The Many Layers of You",
+        date: "2026-03-29",
+        image: "https://cdn.hipsy.nl/images/events/194491-8bf9e393-b854-490d-b021-3291cbcda5cb.jpg",
+        link: "https://hipsy.nl/event/194491-the-many-layers-of-you-creative-self-exploration-workshop"
+    },
+    {
+        title: "Let Yourself Play",
+        date: "2026-04-04",
+        image: "https://cdn.hipsy.nl/images/events/191796-fe218a5d-56d0-4a9e-905e-20cebfdd80c4.jpg",
+        link: "https://hipsy.nl/event/191796-let-yourself-play-intuitive-collage-workshop"
+    },
+    {
+        title: "Free Mindful Walk",
+        date: "2026-04-11",
+        image: "https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0OTUyODh8MHwxfHNlYXJjaHwxMnx8bmF0dXJlJTIwd2Fsa3xlbnwwfDB8fHwxNzU2OTkyOTc2fDA&ixlib=rb-4.1.0&q=80&w=1080&w=1400&q=80&auto=format&dpr=2&fit=clip",
+        link: "https://hipsy.nl/event/191468-free-mindful-walk-in-nature"
+    },
+    {
+        title: "How Do You Truly Feel?",
+        date: "2026-04-26",
+        image: "https://cdn.hipsy.nl/images/events/194501-0d7866ca-f694-43a1-bd28-7c3ec76f8848.jpg",
+        link: "https://hipsy.nl/event/194501-how-do-you-truly-feel-creative-self-exploration-workshop"
+    },
+    {
+        title: "Let Yourself Play",
+        date: "2026-05-02",
+        image: "https://cdn.hipsy.nl/images/events/191796-fe218a5d-56d0-4a9e-905e-20cebfdd80c4.jpg",
+        link: "https://hipsy.nl/event/194471-let-yourself-play-intuitive-collage-workshop"
+    },
+    {
+        title: "Free Mindful Walk",
+        date: "2026-05-09",
+        image: "https://cdn.hipsy.nl/images/events/-388a2ca2-6567-4da0-baec-154899f26677.jpg",
+        link: "https://hipsy.nl/event/209965-free-mindful-walk-in-nature"
+    },
+    {
+        title: "Let Yourself Play",
+        date: "2026-05-30",
+        image: "https://cdn.hipsy.nl/images/events/191796-fe218a5d-56d0-4a9e-905e-20cebfdd80c4.jpg",
+        link: "https://hipsy.nl/event/213026-let-yourself-play-intuitive-collage-workshop"
+    },
+    {
+        title: "Free Mindful Walk",
+        date: "2026-06-06",
+        image: "https://cdn.hipsy.nl/images/events/-388a2ca2-6567-4da0-baec-154899f26677.jpg",
+        link: "https://hipsy.nl/event/217419-free-mindful-walk-in-nature"
+    },
+    {
+        title: "What is Your Healthy Place?",
+        date: "2026-06-07",
+        image: "https://cdn.hipsy.nl/images/events/-e673847f-72fb-4fa9-bf1f-7cd8b78dad4e.jpg",
+        link: "https://hipsy.nl/event/213081-what-is-your-healthy-place-creative-self-exploration-workshop"
+    },
+    {
+        title: "How Do You Truly Feel?",
+        date: "2026-06-18",
+        image: "https://cdn.hipsy.nl/images/events/194501-0d7866ca-f694-43a1-bd28-7c3ec76f8848.jpg",
+        link: "https://hipsy.nl/event/214025-how-do-you-truly-feel-creative-self-exploration-workshop"
+    },
+    {
+        title: "Let Yourself Play",
+        date: "2026-07-04",
+        image: "https://cdn.hipsy.nl/images/events/191796-fe218a5d-56d0-4a9e-905e-20cebfdd80c4.jpg",
+        link: "https://hipsy.nl/event/223168-let-yourself-play-intuitive-collage-workshop"
+    },
+    {
+        title: "Yoga Classes",
+        date: "weekly",
+        image: "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0OTUyODh8MHwxfHNlYXJjaHw0fHx5b2dhfGVufDB8MHx8fDE3NTk5NDA2MzR8MA&ixlib=rb-4.1.0&q=85&w=1400&q=80&auto=format&dpr=2&fit=clip",
+        link: "https://soulhug.nl/yoga-classes"
+    }
+];
+
+function renderEvents(events) {
+
+    const today = new Date(Date.now() - 86400000);
+
+    const has_valid_date = event => !isNaN(new Date(event.date).getTime());
+    const sort = (event_a, event_b) => new Date(event_a.date) - new Date(event_b.date);
+    const format_date = event => new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "long", year: "numeric" }).format(new Date(event.date))
+
+    const is_past = event => has_valid_date(event) && (new Date(event.date) < today);
+
+    const html = event => {
+        const article = document.createElement('article');
+        article.className = `agenda-item`;
+        article.innerHTML = `
+            <img src="${event.image}" alt="${event.title}" class="agenda-image">
+            <div class="agenda-content">
+                <time class="agenda-date">${has_valid_date(event) ? format_date(event) : event.date}</time>
+                <h3 class="agenda-heading">${event.title}</h1>
+                <a href="${event.link}" target="_blank" class="agenda-link">Read more →</a>
+            </div>
+        `;
+        return article;
+    }
+
+    const upcoming = document.getElementById('upcoming');
+
+    events.filter(x => !is_past(x))
+        .sort((a,b) => sort(a,b))
+        .forEach(x => upcoming.appendChild(html(x)));
+
+    const archive = document.getElementById('archive');
+
+    events.filter(x => is_past(x))
+        .sort((a,b) => sort(b, a))
+        .forEach(x => archive.appendChild(html(x)));
+}
+
+// Render events
+renderEvents(events);
+
+// Toggle past events
+const archive = document.getElementById("archive");
+const toggle = document.getElementById("toggle-archive");
+
+toggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    const isHidden = archive.style.display === "none";
+    archive.style.display = isHidden ? "grid" : "none";
+    toggle.textContent = isHidden ? "Hide past events" : "See past events";
+});
+
+</script>

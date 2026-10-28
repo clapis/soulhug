@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A gentle, creative path back to yourself - Soul Hug</title>
+<meta name="description" content="Feeling like you’ve lost touch with who you really are? Our workshops offer a gentle, creative path back to yourself. At Soul Hug, we blend the mindfulness of yoga with the healing touch of creative workshops. Join us in Utrecht.">
+<meta name="keywords" content="community, yoga, art, therapy, mindfulness, meditation, workshop, utrecht, netherlands">
+<meta name="author" content="Soul Hug">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="A gentle, creative path back to yourself - Soul Hug">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://soulhug.nl/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1501366062246-723b4d3e4eb6?w=1200&q=85&fm=jpg">
+<link rel="icon" href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/logo/dfd75154-6493-4d0f-b064-4a58815bda2b.ico">
+<link rel="canonical" href="https://soulhug.nl/">
+<style>
+  :root {
+    --ink: #2b2a33;
+    --muted: #6a6872;
+    --accent: #b5654a;
+    --accent-dark: #8f4a33;
+    --soft: #faf5f0;
+    --line: #e9dfd6;
+    --max: 1100px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body { margin: 0; font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--ink); background: #fff; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--accent); }
+  a:hover { color: var(--accent-dark); }
+  h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
+  h1, h2, h3, h4 { line-height: 1.2; margin: 0; font-weight: 600; }
+  h1 { font-size: clamp(2.4rem, 6vw, 4rem); }
+  h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1.5rem; text-align: center; }
+  h3 { font-size: 1.4rem; margin-bottom: .6rem; }
+  h4 { font-size: 1.15rem; font-weight: 400; }
+  p { margin: 0 0 1em; }
+  section { padding: 5rem 1.25rem; }
+  .wrap { max-width: var(--max); margin: 0 auto; }
+  .narrow { max-width: 760px; margin: 0 auto; }
+  .btn { display: inline-block; background: var(--accent); color: #fff; padding: .8rem 1.6rem; border: 0; border-radius: 999px; font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; transition: background .2s; }
+  .btn:hover { background: var(--accent-dark); color: #fff; }
+  .btn-light { background: #fff; color: var(--ink); }
+  .btn-light:hover { background: var(--soft); color: var(--ink); }
+
+  /* header */
+  header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.95); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; padding: .6rem 1.25rem; }
+  header img { height: 48px; width: auto; }
+  nav ul { display: flex; gap: 1.6rem; list-style: none; margin: 0; padding: 0; }
+  nav a { color: var(--ink); text-decoration: none; font-size: .9rem; }
+  nav a:hover { color: var(--accent); }
+  #menu-toggle { display: none; background: none; border: 0; font-size: 1.8rem; cursor: pointer; color: var(--ink); }
+  @media (max-width: 800px) {
+    #menu-toggle { display: block; }
+    nav ul { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: #fff; border-bottom: 1px solid var(--line); }
+    nav ul.open { display: flex; }
+    nav li a { display: block; padding: .9rem 1.25rem; }
+  }
+
+  /* hero */
+  .hero { position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; padding: 5rem 1.25rem;
+    background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("https://images.unsplash.com/photo-1501366062246-723b4d3e4eb6?w=1800&q=80&fm=jpg") center/cover; }
+  .hero h1 { color: #fff; margin-bottom: 1.2rem; }
+  .hero p { font-size: 1.15rem; }
+  .hero .narrow { max-width: 720px; }
+
+  /* feel list */
+  .feel { background: var(--soft); text-align: center; }
+  .feel h4 { padding: .9rem 0; border-bottom: 1px solid var(--line); }
+  .feel h4:last-of-type { border-bottom: 0; }
+  .feel .more { margin-top: 1.5rem; }
+
+  /* services */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 14px rgba(0,0,0,.04); }
+  .card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+  .card .body { padding: 1.4rem 1.5rem 1.6rem; flex: 1; display: flex; flex-direction: column; }
+  .card .body p { color: var(--muted); font-size: .9rem; flex: 1; }
+
+  /* agenda */
+  .agenda-list { display: grid; gap: 1.2rem; }
+  .agenda-item { display: flex; gap: 1.2rem; align-items: center; background: var(--soft); border-radius: 12px; padding: 1rem; }
+  .agenda-item img { width: 130px; height: 90px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .agenda-date { display: block; font-size: .9rem; color: var(--muted); }
+  .agenda-item h3 { font-size: 1.15rem; margin: .1rem 0 .3rem; }
+  .agenda-item a { font-size: .9rem; text-decoration: none; }
+  #archive .agenda-item { opacity: .55; }
+  #toggle-archive { display: inline-block; margin: 1.5rem 0; }
+  .empty { text-align: center; color: var(--muted); }
+  @media (max-width: 600px) { .agenda-item { flex-direction: column; align-items: flex-start; } .agenda-item img { width: 100%; height: 160px; } }
+
+  /* banners */
+  .quote { background: var(--accent); color: #fff; text-align: center; padding: 4rem 1.25rem; }
+  .quote h2 { color: #fff; margin-bottom: .5rem; }
+  .quote p { font-size: 1.15rem; margin: 0; }
+  .image-banner { height: 380px; background: url("https://images.unsplash.com/photo-1512238701577-f182d9ef8af7?w=1800&q=80&fm=jpg") center/cover; }
+  .image-banner[role="img"] { display: block; }
+  .mission { background: var(--soft); }
+  .mission p { font-style: italic; }
+  .mission h2 { margin-bottom: 1.2rem; }
+
+  /* team */
+  .team { display: grid; grid-template-columns: 320px 1fr; gap: 3rem; align-items: start; }
+  .team img { width: 100%; border-radius: 16px; aspect-ratio: 1; object-fit: cover; }
+  .team h3 { font-size: 2rem; }
+  @media (max-width: 800px) { .team { grid-template-columns: 1fr; } .team img { max-width: 320px; margin: 0 auto; } }
+
+  /* reviews */
+  .reviews { background: var(--soft); text-align: center; }
+  .review { display: none; }
+  .review.active { display: block; }
+  .review blockquote { margin: 0 0 1rem; font-size: 1.25rem; font-style: italic; }
+  .review cite { color: var(--muted); font-style: normal; font-size: .9rem; }
+  .carousel-controls { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 2rem; color: var(--muted); }
+  .carousel-controls button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: #fff; font-size: 1.1rem; cursor: pointer; }
+  .carousel-controls button:hover { background: var(--accent); color: #fff; }
+
+  /* faq */
+  details { border-bottom: 1px solid var(--line); padding: 1.1rem 0; }
+  details:first-of-type { border-top: 1px solid var(--line); }
+  summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: 1.5rem; line-height: 1; color: var(--accent); }
+  details[open] summary::after { content: "–"; }
+  details p { margin: 1rem 0 0; color: var(--muted); }
+
+  .benefits { background: var(--soft); text-align: center; }
+  .benefits h4 { padding: .8rem 0; border-bottom: 1px solid var(--line); }
+  .benefits .cta { margin-top: 1.5rem; }
+
+  /* forms */
+  form { display: grid; gap: 1rem; }
+  label { font-size: .9rem; color: var(--muted); display: block; margin-bottom: .25rem; }
+  input, textarea { width: 100%; padding: .8rem; border: 1px solid #d3c8bf; border-radius: 8px; font: inherit; }
+  input:focus, textarea:focus { outline: 2px solid var(--accent); border-color: transparent; }
+  textarea { min-height: 150px; resize: vertical; }
+  .newsletter { background: var(--soft); text-align: center; }
+  .newsletter form { grid-template-columns: 1fr auto; align-items: end; max-width: 520px; margin: 1rem auto 0; text-align: left; }
+  @media (max-width: 500px) { .newsletter form { grid-template-columns: 1fr; } }
+
+  footer { background: var(--ink); color: #ddd; padding: 3rem 1.25rem 2rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; align-items: center; }
+  footer img { height: 56px; width: auto; background: #fff; border-radius: 8px; padding: 4px; }
+  footer ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; flex-wrap: wrap; }
+  footer a { color: #fff; text-decoration: none; }
+  footer a:hover { text-decoration: underline; color: #fff; }
+  footer .copy { width: 100%; font-size: .9rem; border-top: 1px solid #44434d; padding-top: 1.2rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="/"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/logo/d3923081-0502-43bc-8fdd-9ed8843d787b.png" alt="Soul Hug logo"></a>
+    <button id="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav aria-label="Main navigation">
+      <ul id="menu">
+        <li><a href="workshops">Workshops</a></li>
+        <li><a href="yoga-classes">Yoga Classes</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="inspiration">Inspiration</a></li>
+        <li><a href="#team">About</a></li>
+        <li><a href="#contact">Get in touch</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="introduction">
+    <div class="narrow">
+      <h1>Come home to yourself</h1>
+      <p>Feeling like you’ve lost touch with who you really are?<br>Our workshops offer a gentle, creative path back to yourself.</p>
+      <p>At Soul Hug, we blend the mindfulness of yoga with the healing touch of creative workshops. Join us in Utrecht to slow down, explore, and gently come home to your deeper self, in a safe and supportive space.</p>
+      <a class="btn" href="#agenda">See Upcoming Sessions</a>
+    </div>
+  </section>
+
+  <section class="feel">
+    <div class="narrow">
+      <h2>Do you feel...</h2>
+      <h4>... like you're missing the spark that used to define you</h4>
+      <h4>... you're just going through the motions every day</h4>
+      <h4>... you've drifted away from your real self</h4>
+      <h4>... you're craving for a moment just for you</h4>
+      <h4>... eager to explore what truly lights you up</h4>
+      <h4>... a longing to reconnect with your inner voice</h4>
+      <h4>... a longing to connect with like-minded souls</h4>
+      <p class="more"><a href="#services"><em>See what Soul Hug can mean to you &gt;&gt;&gt;</em></a></p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>What we offer</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1567467468694-377c5dc62ec6?w=800&q=80&auto=format&fit=clip" alt="pencil, colors, paper, school" loading="lazy">
+          <div class="body">
+            <h3>The Soul Hug Ateliers</h3>
+            <p>Guided creative workshops for self-exploration. A gentle space where you can explore your inner landscape through colour, shape, and imagery, and awaken your intuitive wisdom. No art skills or experience are needed - just your curious heart. Discover how the creative process itself can be deeply transformative when held in a supportive, non-judgmental environment.</p>
+            <div><a class="btn" href="workshops#quotebanner-1">Read more</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1589460647241-8e5d47cfb36d?w=800&q=80&auto=format&fit=clip" alt="Art therapy" loading="lazy">
+          <div class="body">
+            <h3>Yoga &amp; Art Workshops</h3>
+            <p>A space where yoga meets creative expression. Through gentle, mindful movement and guided art explorations, you’ll soften into stillness, listen inward, and give voice to what lives inside. Come as you are - no skills or experience needed, only your curious heart.</p>
+            <div><a class="btn" href="workshops#quotebanner-2">Read more</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=800&q=80&auto=format&fit=clip" alt="woman performing yoga" loading="lazy">
+          <div class="body">
+            <h3>Yoga Classes</h3>
+            <p>Join our weekly yoga classes for all levels. A space to slow down, and meet yourself with gentleness. Tune into sensations and feel the presence of your soul. Find your edge with awareness, breathe within challenge. Nurture both strength and softness from a place of presence and love, in a supportive atmosphere.</p>
+            <div><a class="btn" href="yoga-classes">Read more</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?w=800&q=80&auto=format&fit=clip" alt="Woman on a log in a lake" loading="lazy">
+          <div class="body">
+            <h3>Mindful Walks</h3>
+            <p>Do you also long for more nature and don't do it enough? Join us on nature walks, feeling the breeze on your cheeks, the soft ground under your feet, the rejuvenating feeling of being outside. These are free and donation-based, purely for the pleasure of sharing a mindful moment with like-minded souls.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&q=80&auto=format&fit=clip" alt="Painted red" loading="lazy">
+          <div class="body">
+            <h3>Community Events</h3>
+            <p>Tea-time, expressive dance, volunteering, ... These moments to connect can take any form. Participate in our community events that promote wellbeing, authenticity, connection and creativity through shared experiences. These gatherings are free and donation-based, perfect for making new friends and exploring new interests.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1687783615494-b4a1f1af8b58?w=800&q=80&auto=format&fit=clip" alt="a large room with a lot of yoga mats on the floor" loading="lazy">
+          <div class="body">
+            <h3>Retreats</h3>
+            <p>Join us for immersive retreats combining yoga, art, and more, to nourish mind, body, and spirit. Reconnect with your inner spark and find belonging in a safe, nurturing space that fosters authenticity and kindness.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="agenda" style="background: var(--soft)">
+    <div class="narrow">
+      <h2>Agenda</h2>
+      <div id="upcoming" class="agenda-list"></div>
+      <a href="#" id="toggle-archive">See past events</a>
+      <div id="archive" class="agenda-list" hidden></div>
+    </div>
+  </section>
+
+  <div class="quote" id="quotebanner-1">
+    <h2>Slow down. Breathe. Create.</h2>
+    <p>Reconnect with your soul.</p>
+  </div>
+
+  <div class="image-banner" role="img" aria-label="macro photography of sunflower"></div>
+
+  <section id="team">
+    <div class="wrap">
+      <h2>Your Facilitator</h2>
+      <div class="team">
+        <img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/50140e5f-aef6-4f2c-9624-2b11aa33fe3e_1040x1040.webp" alt="Valérie Rossi" loading="lazy">
+        <div>
+          <h3>Valérie Rossi</h3>
+          <p>Soul Hug is my passion project, born from a lifelong love of movement, mindfulness, and free creative expression. I’ve always been drawn to the connection between body, mind, and spirit - from my early years in Belgium practicing karate and later dance, to discovering yoga in my teens and returning to it in 2018 as a source of softness, grounding, and truth.</p>
+          <p>As a certified yoga teacher, I bring an embodied and mindful approach to everything I share. My intention is to create a safe and nurturing space where others can slow down, be guided to listen inward and give space to what lies inside, sometimes bringing the unconscious conscious.</p>
+          <p>Through mindful movement and with the power of expressive arts, I hope to guide you toward a deeper connection with yourself - so you can move through life with more ease, authenticity, and joy.</p>
+          <p>Read more about <a href="#mission">our mission</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="narrow">
+      <h2>What others say</h2>
+      <div class="review active">
+        <blockquote>"I was struck by how interesting the combination of yoga and art therapy was. I feel like I have learned tools that I will embody in my daily practices, deepening my self knowledge and healing process under the guidance of a gentle and welcoming teacher."</blockquote>
+        <cite>Yoga &amp; Art Workshop, Utrecht 2024</cite>
+      </div>
+      <div class="review">
+        <blockquote>"Valerie was very kind and created a wonderful atmosphere. I really liked how she introduced all the exercises and the energy she managed to keep for the whole process."</blockquote>
+        <cite>Yoga &amp; Art Workshop, Utrecht 2024</cite>
+      </div>
+      <div class="review">
+        <blockquote>"Really good, it encouraged us to look inward and created a safe space for us to be vulnerable with ourselves."</blockquote>
+        <cite>Self-Exploration Art Workshop, Amersfoort 2023</cite>
+      </div>
+      <div class="review">
+        <blockquote>"Valerie is a really gentle person and this helped to create the safe space that was needed."</blockquote>
+        <cite>Self-Exploration Art Workshop, Amersfoort 2023</cite>
+      </div>
+      <div class="carousel-controls">
+        <button id="prev" aria-label="Previous review">←</button>
+        <span id="counter">1 / 4</span>
+        <button id="next" aria-label="Next review">→</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote">
+    <a class="btn btn-light" href="#agenda">See our Upcoming Sessions</a>
+  </div>
+
+  <section id="faq">
+    <div class="narrow">
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>I have never painted/drawn (or not for a long time), do I need to have any art skills or experience to participate and enjoy the benefits of this approach?</summary>
+        <p>Not at all, you don’t need to know how to draw or paint. The creative explorations are simple and open to everyone, using colour, shapes, collage, writing, free spontaneous doodles. It's all about the process, not the result. You are here to <em>feel</em> good, explore, and reconnect with yourself. Over time, you will grow more confident and will start trusting your own creative rhythm.</p>
+      </details>
+      <details>
+        <summary>I have never done yoga (or I'm not very flexible), is that an issue for the workshops combining yoga and art?</summary>
+        <p>Not at all. You are very welcome even as a total beginner. The yoga we practice in these workshops is slow, mindful, and intuitive. It’s about connecting with your breath and sensations, learning to listen to your body with curiosity and kindness, rather than achieving any pose. All you need is an open mind and a willingness to explore your inner landscape.</p>
+      </details>
+      <details>
+        <summary>What are the benefits of combining yoga with art explorations?</summary>
+        <p>Something beautiful happens when the two are combined. Yoga helps you ground, relax, and reconnect with your body and breath, while creative exploration gives voice to your inner world. Together, they reduce stress, nurture self-awareness, and open space for emotional release and authentic expression.</p>
+      </details>
+      <details>
+        <summary>Do I need to bring materials for the art explorations?</summary>
+        <p>No, we provide the art materials. That being said, we sometimes invite participants to bring a few of their own - things like pencils, brushes, glue, scissors, or an old magazine to cut from. This helps ensure everyone has enough to work with and adds a personal touch to your creations. You’re welcome to share or use them just for yourself.</p>
+      </details>
+      <details>
+        <summary>What is your cancellation and refund policy for the workshops?</summary>
+        <p>As a general rule, you may cancel your workshop booking up to 14 days before the scheduled date for a full refund. Cancellations made within 14 days are non-refundable, unless otherwise agreed. For retreats or special events, the cancellation period may differ and is always specified in the activity description and booking confirmation. You can read our full <a href="terms-and-privacy-policy">Terms on this page</a>.</p>
+      </details>
+      <details>
+        <summary>How do I contact you for more information?</summary>
+        <p>You can reach us via the <a href="#contact">contact form</a> on our website or by email <a href="mailto:hello@soulhug.nl">hello@soulhug.nl</a>. We are happy to answer any questions and help you find the right class or workshop for you.</p>
+      </details>
+      <details>
+        <summary>Do you offer online sessions?</summary>
+        <p>Not at the moment. The heart of Soul Hug lies in being fully present - reconnecting with the “real” world, with your senses and sensations, the textures of materials, and the shared energy of a group in person.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="narrow">
+      <h2>Join and reap the benefits - You may feel...</h2>
+      <h4>... more self-aware - understanding your needs, emotions, and limits</h4>
+      <h4>... more “at home” in your own body and life</h4>
+      <h4>... calmer and more grounded</h4>
+      <h4>... more compassionate toward yourself and others</h4>
+      <h4>... a deeper trust in your intuition and inner guidance</h4>
+      <h4>... more present in daily life - truly tasting, sensing, and experiencing the moment</h4>
+      <h4>... a gentle sense of joy, curiosity, or aliveness</h4>
+      <h4>... a sense of wholeness - living from who you <em>are</em>, not who you think you “should” be</h4>
+      <p class="cta"><a class="btn" href="#agenda">See our Upcoming Sessions</a></p>
+    </div>
+  </section>
+
+  <section class="mission" id="mission">
+    <div class="narrow">
+      <h2>Our mission</h2>
+      <p>My dream world is a world where people dance hand in hand, skipping away joyfully, a smile on their face, lightness and love in their heart - no less. Each person feels safe in the company of others, as each person knows and embraces who they truly are, strengths and quirkinesses alike.</p>
+      <p>My mission is to keep finding my own way home, to acceptance, truth, love and joy, with patience and compassion, and to provide a safe space for others to explore their inner landscape, to get to know their true nature - and who knows, feel that little spark in their heart again :-)</p>
+      <p>Big hug,<br>Valerie</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="narrow">
+      <h2>Feel free to reach out</h2>
+      <form id="contact-form">
+        <div><label for="email">Email address *</label><input type="email" id="email" placeholder="name@example.com" maxlength="5000" required></div>
+        <div><label for="name">Name *</label><input type="text" id="name" placeholder="John Doe" maxlength="5000" required></div>
+        <div><label for="phone">Phone number</label><input type="tel" id="phone" placeholder="123-456-7890" maxlength="5000"></div>
+        <div><label for="message">Message *</label><textarea id="message" placeholder="Enter your message here" maxlength="5000" required></textarea></div>
+        <div><button class="btn" type="submit">Contact Us</button></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="newsletter" id="newsletter">
+    <div class="narrow">
+      <h2>Soul Hug Updates</h2>
+      <p>Sign up for our email newsletter</p>
+      <form id="newsletter-form">
+        <div><label for="newsletter-email">Email</label><input id="newsletter-email" type="email" placeholder="Email" required></div>
+        <button class="btn" type="submit">Sign up</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="/"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/logo/d3923081-0502-43bc-8fdd-9ed8843d787b.png" alt="Soul Hug logo"></a>
+    <ul>
+      <li><a href="#team">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="terms-and-privacy-policy">Terms &amp; Privacy</a></li>
+    </ul>
+    <div class="copy">© 2026 Soul Hug</div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const menu = document.getElementById("menu");
+  const menuToggle = document.getElementById("menu-toggle");
+  menuToggle.addEventListener("click", () => {
+    const open = menu.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", open);
+  });
+  menu.addEventListener("click", () => { menu.classList.remove("open"); menuToggle.setAttribute("aria-expanded", false); });
+
+  // Reviews carousel
+  const reviews = [...document.querySelectorAll(".review")];
+  const counter = document.getElementById("counter");
+  let current = 0;
+  const showReview = i => {
+    current = (i + reviews.length) % reviews.length;
+    reviews.forEach((r, n) => r.classList.toggle("active", n === current));
+    counter.textContent = `${current + 1} / ${reviews.length}`;
+  };
+  document.getElementById("prev").addEventListener("click", () => showReview(current - 1));
+  document.getElementById("next").addEventListener("click", () => showReview(current + 1));
+  setInterval(() => showReview(current + 1), 9000);
+
+  // Agenda
+  const events = [
+    { title: "Free Mindful Walk", date: "2025-11-09", image: "https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?w=400&q=80&auto=format&fit=clip", link: "https://hipsy.nl/event/156549-mindful-walk" },
+    { title: "Yoga & Art for Self-Discovery", date: "2025-11-22", image: "https://cdn.hipsy.nl/images/events/156539-b6fdc377-2886-4dd3-bf12-fd05036856fe.jpg", link: "https://hipsy.nl/event/156539-yoga-art-for-self-discovery" },
+    { title: "Yoga & Art for Self-Discovery", date: "2025-12-07", image: "https://cdn.hipsy.nl/images/events/156539-b6fdc377-2886-4dd3-bf12-fd05036856fe.jpg", link: "https://www.momoyoga.com/studionatuurlijk/lesson/28443552/Special-Creative-Yoga-for-Self-Discovery" },
+    { title: "Free Mindful Walk", date: "2025-12-13", image: "https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?w=400&q=80&auto=format&fit=clip", link: "https://hipsy.nl/event/168698-free-mindful-walk-in-nature" },
+    { title: "Find Balance this Holiday Season", date: "2025-12-14", image: "https://cdn.hipsy.nl/images/events/165965-72a0745b-00cf-4076-938d-89c911437cf2.jpg", link: "https://hipsy.nl/event/165965-find-balance-this-holiday-season-creative-self-exploration-workshop" },
+    { title: "Free Mindful Walk", date: "2026-01-10", image: "https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?w=400&q=80&auto=format&fit=clip", link: "https://hipsy.nl/event/168727-free-mindful-walk-in-nature" },
+    { title: "Find your Path into the NY", date: "2026-01-11", image: "https://cdn.hipsy.nl/images/events/165965-72a0745b-00cf-4076-938d-89c911437cf2.jpg", link: "https://hipsy.nl/event/166019-find-your-path-into-the-ny-creative-self-exploration-workshop" },
+    { title: "Free Mindful Walk", date: "2026-03-14", image: "https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?w=400&q=80&auto=format&fit=clip", link: "https://hipsy.nl/event/191431-free-mindful-walk-in-nature" },
+    { title: "The Many Layers of You", date: "2026-03-29", image: "https://cdn.hipsy.nl/images/events/194491-8bf9e393-b854-490d-b021-3291cbcda5cb.jpg", link: "https://hipsy.nl/event/194491-the-many-layers-of-you-creative-self-exploration-workshop" },
+    { title: "Let Yourself Play", date: "2026-04-04", image: "https://cdn.hipsy.nl/images/events/191796-fe218a5d-56d0-4a9e-905e-20cebfdd80c4.jpg", link: "https://hipsy.nl/event/191796-let-yourself-play-intuitive-collage-workshop" },
+    { title: "Free Mindful Walk", date: "2026-04-11", image: "https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?w=400&q=80&auto=format&fit=clip", link: "https://hipsy.nl/event/191468-free-mindful-walk-in-nature" },
+    { title: "How Do You Truly Feel?", date: "2026-04-26", image: "https://cdn.hipsy.nl/images/events/194501-0d7866ca-f694-43a1-bd28-7c3ec76f8848.jpg", link: "https://hipsy.nl/event/194501-how-do-you-truly-feel-creative-self-exploration-workshop" },
+    { title: "Let Yourself Play", date: "2026-05-02", image: "https://cdn.hipsy.nl/images/events/191796-fe218a5d-56d0-4a9e-905e-20cebfdd80c4.jpg", link: "https://hipsy.nl/event/194471-let-yourself-play-intuitive-collage-workshop" },
+    { title: "Free Mindful Walk", date: "2026-05-09", image: "https://cdn.hipsy.nl/images/events/-388a2ca2-6567-4da0-baec-154899f26677.jpg", link: "https://hipsy.nl/event/209965-free-mindful-walk-in-nature" },
+    { title: "Let Yourself Play", date: "2026-05-30", image: "https://cdn.hipsy.nl/images/events/191796-fe218a5d-56d0-4a9e-905e-20cebfdd80c4.jpg", link: "https://hipsy.nl/event/213026-let-yourself-play-intuitive-collage-workshop" },
+    { title: "Free Mindful Walk", date: "2026-06-06", image: "https://cdn.hipsy.nl/images/events/-388a2ca2-6567-4da0-baec-154899f26677.jpg", link: "https://hipsy.nl/event/217419-free-mindful-walk-in-nature" },
+    { title: "What is Your Healthy Place?", date: "2026-06-07", image: "https://cdn.hipsy.nl/images/events/-e673847f-72fb-4fa9-bf1f-7cd8b78dad4e.jpg", link: "https://hipsy.nl/event/213081-what-is-your-healthy-place-creative-self-exploration-workshop" },
+    { title: "How Do You Truly Feel?", date: "2026-06-18", image: "https://cdn.hipsy.nl/images/events/194501-0d7866ca-f694-43a1-bd28-7c3ec76f8848.jpg", link: "https://hipsy.nl/event/214025-how-do-you-truly-feel-creative-self-exploration-workshop" },
+    { title: "Let Yourself Play", date: "2026-07-04", image: "https://cdn.hipsy.nl/images/events/191796-fe218a5d-56d0-4a9e-905e-20cebfdd80c4.jpg", link: "https://hipsy.nl/event/223168-let-yourself-play-intuitive-collage-workshop" },
+    { title: "Yoga Classes", date: "weekly", image: "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=400&q=80&auto=format&fit=clip", link: "yoga-classes" }
+  ];
+
+  const escapeHtml = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const validDate = e => !isNaN(new Date(e.date).getTime());
+  const fmt = e => validDate(e) ? new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "long", year: "numeric" }).format(new Date(e.date)) : e.date;
+  const yesterday = new Date(Date.now() - 86400000);
+  const isPast = e => validDate(e) && new Date(e.date) < yesterday;
+
+  const card = e => {
+    const el = document.createElement("article");
+    el.className = "agenda-item";
+    el.innerHTML = `
+      <img src="${e.image}" alt="${escapeHtml(e.title)}" loading="lazy">
+      <div>
+        <time class="agenda-date">${fmt(e)}</time>
+        <h3>${escapeHtml(e.title)}</h3>
+        <a href="${e.link}" target="_blank" rel="noopener">Read more →</a>
+      </div>`;
+    return el;
+  };
+
+  const upcoming = document.getElementById("upcoming");
+  const archive = document.getElementById("archive");
+  const toggle = document.getElementById("toggle-archive");
+  const byDate = (a, b) => new Date(a.date) - new Date(b.date);
+
+  events.filter(e => !isPast(e)).sort(byDate).forEach(e => upcoming.appendChild(card(e)));
+  events.filter(isPast).sort((a, b) => byDate(b, a)).forEach(e => archive.appendChild(card(e)));
+  if (!upcoming.children.length) upcoming.innerHTML = '<p class="empty">No upcoming sessions scheduled right now.</p>';
+
+  toggle.addEventListener("click", ev => {
+    ev.preventDefault();
+    archive.hidden = !archive.hidden;
+    toggle.textContent = archive.hidden ? "See past events" : "Hide past events";
+  });
+
+  // Forms (no backend: hand off to the visitor's mail client)
+  document.getElementById("contact-form").addEventListener("submit", ev => {
+    ev.preventDefault();
+    const v = id => document.getElementById(id).value.trim();
+    const body = `${v("message")}\n\n${v("name")}\n${v("email")}${v("phone") ? "\n" + v("phone") : ""}`;
+    location.href = `mailto:hello@soulhug.nl?subject=${encodeURIComponent("Message from " + v("name"))}&body=${encodeURIComponent(body)}`;
+  });
+  document.getElementById("newsletter-form").addEventListener("submit", ev => {
+    ev.preventDefault();
+    const email = document.getElementById("newsletter-email").value.trim();
+    location.href = `mailto:hello@soulhug.nl?subject=${encodeURIComponent("Newsletter signup")}&body=${encodeURIComponent("Please add me to the newsletter: " + email)}`;
+  });
+</script>
+</body>
+</html>
