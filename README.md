@@ -18,6 +18,8 @@ Goal: replace the exported website (a Next.js/Bootstrap export from Soloist, in 
 
 The workshops page follows the original layout: a centered circular introduction image, alternating flower-masked images and text, bulleted descriptions, and gray/white section backgrounds. It keeps the simplified system/Georgia fonts and shared home-page header/footer.
 
+The home page also follows the original layout: a light, left-aligned hero, right-aligned introductory list, circular service images, centered facilitator portrait and biography, and alternating gray, white, and teal sections. Its agenda, review carousel, native FAQs, and mailto forms remain dependency-free.
+
 ## Status
 
 - [x] `index.html` (home)
@@ -30,8 +32,9 @@ The workshops page follows the original layout: a centered circular introduction
 
 - **Single file per page**, inline `<style>` and `<script>`, no frameworks, no build step. The original Bootstrap, Sentry and cookie-wall are dropped.
 - **Content kept verbatim**: all text, the order of sections, and all images (hot-linked from Unsplash / `cdn.soloist.ai` with smaller sizes via `?w=` and `loading="lazy"`).
-- **Fonts**: Georgia serif for `h1`–`h3`, system sans-serif (`system-ui` stack) for everything else. No web fonts. Small set of sizes (.9 / 1 / 1.15 / 1.25 / 1.4rem). Serif headings were deliberately kept.
+- **Fonts**: Georgia serif for headings, system sans-serif (`system-ui` stack) for body text. No web fonts. Content sizing follows the original layouts: mostly 16px body text, 32px section headings, and smaller headings on mobile.
 - **Palette** (CSS variables): ink `#2b2a33`, muted `#6a6872`, accent `#b5654a`, soft background `#faf5f0`, line `#e9dfd6`.
+- **Content layouts** retain the original white/gray (`#e5e5e5`) backgrounds and teal (`#006059` / `#0f766e`) sections and buttons. Shared header/footer styling stays consistent across migrated pages.
 - **Header/footer/nav** are duplicated per page. Nav: Workshops, Yoga Classes, Agenda, Inspiration, About, Get in touch. Mobile hamburger menu in a few lines of JS.
 - **Links**: migrated pages use `.html` links (`workshops.html`, `yoga-classes.html`, `inspiration.html`) so they work locally without URL rewrites. The unmigrated `terms-and-privacy-policy` page still uses its clean path as on the live site. In-page anchors: `#agenda`, `#services`, `#team`, `#mission`, `#contact`, `#faq`. Note `workshops.html#quotebanner-1` / `#quotebanner-2` must exist on the workshops page.
 - **Agenda**: fetched from `events.json`, an array of objects with `title`, `date`, `image`, and `link` strings. Events dated before yesterday go under "See past events"; `"date": "weekly"` stays in upcoming. The dates all lie in the past, so the list needs updating (events link to hipsy.nl / momoyoga). Loading failures show a message and a link to Hipsy.
@@ -45,7 +48,6 @@ Run `python3 -m http.server 8000` from the repository root and open `http://loca
 
 ## Open points / ideas
 
-- Check `index.html` in a browser (it was written but not visually tested), including the mobile layout.
 - Decide on the hosting/URL rewrite for clean paths vs `.html` links.
 - Optional: a nicer heading font (e.g. Fraunces/Lora) if Georgia feels too plain.
 - Consider extracting shared CSS into one `style.css` once there are several pages (currently all inline in `index.html`).

@@ -30,20 +30,18 @@
   img { max-width: 100%; display: block; }
   a { color: var(--accent); }
   a:hover { color: var(--accent-dark); }
-  h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
-  h1, h2, h3, h4 { line-height: 1.2; margin: 0; font-weight: 600; }
-  h1 { font-size: clamp(2.4rem, 6vw, 4rem); }
-  h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1.5rem; text-align: center; }
-  h3 { font-size: 1.4rem; margin-bottom: .6rem; }
-  h4 { font-size: 1.15rem; font-weight: 400; }
+  h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; line-height: 1.2; margin: 0; font-weight: 400; }
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; margin-bottom: 32px; text-align: center; }
+  h3 { font-size: 1.5rem; margin-bottom: 16px; }
+  h4 { font-size: 1.25rem; }
   p { margin: 0 0 1em; }
-  section { padding: 5rem 1.25rem; }
   .wrap { max-width: var(--max); margin: 0 auto; }
-  .narrow { max-width: 760px; margin: 0 auto; }
-  .btn { display: inline-block; background: var(--accent); color: #fff; padding: .8rem 1.6rem; border: 0; border-radius: 999px; font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; transition: background .2s; }
-  .btn:hover { background: var(--accent-dark); color: #fff; }
-  .btn-light { background: #fff; color: var(--ink); }
-  .btn-light:hover { background: var(--soft); color: var(--ink); }
+  .narrow { width: 66.666667%; margin: 0 auto; }
+  .btn { display: inline-block; background: #0f766e; color: #fff; padding: .5rem 1.25rem; border: 1px solid transparent; border-radius: 6px; font: inherit; text-decoration: none; cursor: pointer; transition: background .2s; }
+  .btn:hover { background: #00635c; color: #fff; }
+  .btn-light { background: transparent; border-color: #aed2cd; color: #fff; }
+  .btn-light:hover { background: #4c948c; color: #fff; }
 
   /* header */
   header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.95); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
@@ -60,88 +58,140 @@
     nav li a { display: block; padding: .9rem 1.25rem; }
   }
 
+  main { font-size: 16px; line-height: 1.5; color: #000; }
+  main section, main .quote { padding: 64px 24px; }
+  main .wrap { max-width: 1352px; }
+  main a { color: #0f766e; }
+  main a:hover { color: #00635c; }
+  main .btn { color: #fff; }
+
   /* hero */
-  .hero { position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; padding: 5rem 1.25rem;
-    background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("https://images.unsplash.com/photo-1501366062246-723b4d3e4eb6?w=1800&q=80&fm=jpg") center/cover; }
-  .hero h1 { color: #fff; margin-bottom: 1.2rem; }
-  .hero p { font-size: 1.15rem; }
-  .hero .narrow { max-width: 720px; }
+  .hero { background: linear-gradient(rgba(255,255,255,.78), rgba(255,255,255,.78)), url("https://images.unsplash.com/photo-1501366062246-723b4d3e4eb6?w=1800&q=80&fm=jpg") center/cover; }
+  .hero .narrow { min-height: 640px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+  .hero h1 { margin-bottom: 32px; }
+  .hero p { font-size: 1.25rem; line-height: 1.5; margin-bottom: 20px; }
+  .hero .btn { margin-top: 12px; padding: .6rem 1.4rem; font-size: 1.25rem; }
 
   /* feel list */
-  .feel { background: var(--soft); text-align: center; }
-  .feel h4 { padding: .9rem 0; border-bottom: 1px solid var(--line); }
-  .feel h4:last-of-type { border-bottom: 0; }
-  .feel .more { margin-top: 1.5rem; }
+  .feel, .feel h2 { text-align: right; }
+  .feel h4, .benefits h4 { margin-bottom: 20px; }
+  .feel h4:last-of-type, .benefits h4:last-of-type { margin-bottom: 0; }
+  .feel .more { margin: 48px 0 12px; }
 
   /* services */
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-  .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 14px rgba(0,0,0,.04); }
-  .card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
-  .card .body { padding: 1.4rem 1.5rem 1.6rem; flex: 1; display: flex; flex-direction: column; }
-  .card .body p { color: var(--muted); font-size: .9rem; flex: 1; }
+  #services, #faq, .newsletter { background: #e5e5e5; }
+  #services h2 { margin-bottom: 48px; }
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+  .service-image { position: relative; aspect-ratio: 1; border: 2px solid #0f766e; border-radius: 50%; overflow: hidden; margin-bottom: 24px; }
+  .service-image img { position: absolute; top: 0; left: 0; width: 100%; height: auto; transform-origin: top left; transform: translateX(-25%) scale(1.5); }
+  .card:nth-child(2) img { transform: translateX(-24.89597780859917%) scale(1.4979195561719836); }
+  .card:nth-child(3) img { transform: translateX(-12.5%) scale(1.25); }
+  .card h3 { margin-bottom: 12px; }
+  .card .body p { padding-right: 24px; margin-bottom: 24px; line-height: 1.75; }
+  .card .body > p:last-child { margin-bottom: 0; }
 
   /* agenda */
-  .agenda-list { display: grid; gap: 1.2rem; }
+  #agenda { background: #006059; color: #fff; }
+  .agenda-list { display: grid; gap: 1.5rem; }
   .agenda-list[hidden] { display: none; }
-  .agenda-item { display: flex; gap: 1.2rem; align-items: center; background: var(--soft); border-radius: 12px; padding: 1rem; }
-  .agenda-item img { width: 130px; height: 90px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
-  .agenda-date { display: block; font-size: .9rem; color: var(--muted); }
-  .agenda-item h3 { font-size: 1.15rem; margin: .1rem 0 .3rem; }
+  .agenda-item { display: flex; gap: 1rem; align-items: center; background: #f9f9f9; color: #000; border-radius: 12px; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,.05); }
+  .agenda-item img { width: 120px; height: 80px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .agenda-date { display: block; font-size: .9rem; color: #666; margin-bottom: .25rem; }
+  .agenda-item h3 { font-size: 1.2rem; margin: 0 0 .25rem; }
   .agenda-item a { font-size: .9rem; text-decoration: none; }
   #archive .agenda-item { opacity: .55; }
-  #toggle-archive { display: block; width: fit-content; margin: 1.5rem auto; font-size: .85rem; }
+  #toggle-archive { display: block; width: fit-content; margin: 1.5rem auto; font-size: .85rem; color: #f5f5f5; }
   #toggle-archive[hidden] { display: none; }
-  .empty { text-align: center; color: var(--muted); }
-  @media (max-width: 600px) { .agenda-item { flex-direction: column; align-items: flex-start; } .agenda-item img { width: 100%; height: 160px; } }
+  .empty { text-align: center; }
+  .empty a { color: #aed2cd; }
+  @media (max-width: 600px) { .agenda-item { flex-direction: column; align-items: flex-start; } .agenda-item img { width: 100%; height: 150px; } }
 
   /* banners */
-  .quote { background: var(--accent); color: #fff; text-align: center; padding: 4rem 1.25rem; }
-  .quote h2 { color: #fff; margin-bottom: .5rem; }
-  .quote p { font-size: 1.15rem; margin: 0; }
-  .image-banner { height: 380px; background: url("https://images.unsplash.com/photo-1512238701577-f182d9ef8af7?w=1800&q=80&fm=jpg") center/cover; }
-  .image-banner[role="img"] { display: block; }
-  .mission { background: var(--soft); }
+  .quote { background: #006059; color: #fff; text-align: center; }
+  #quotebanner-1 { background: #e5e5e5; color: #000; }
+  .quote h2 { margin-bottom: 28px; }
+  .quote p { margin: 0; }
+  .quote .btn { margin: 24px 0; }
+  .image-banner { height: 320px; background: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url("https://images.unsplash.com/photo-1512238701577-f182d9ef8af7?w=1800&q=80&fm=jpg") center/cover; }
+  .mission { background: #006059; color: #fff; }
+  .mission, .mission h2 { text-align: right; }
   .mission p { font-style: italic; }
-  .mission h2 { margin-bottom: 1.2rem; }
+  .mission h2 { margin-bottom: 48px; }
+  .mission p:last-child { margin-bottom: 0; }
 
   /* team */
-  .team { display: grid; grid-template-columns: 320px 1fr; gap: 3rem; align-items: start; }
-  .team img { width: 100%; border-radius: 16px; aspect-ratio: 1; object-fit: cover; }
-  .team h3 { font-size: 2rem; }
-  @media (max-width: 800px) { .team { grid-template-columns: 1fr; } .team img { max-width: 320px; margin: 0 auto; } }
+  #team { text-align: center; }
+  #team h2 { margin-bottom: 64px; }
+  .team img { width: 360px; border-radius: 50%; aspect-ratio: 1; object-fit: cover; margin: 0 auto 32px; }
+  .team .narrow { line-height: 1.75; }
 
   /* reviews */
-  .reviews { background: var(--soft); text-align: center; }
+  .reviews { background: #006059; color: #fff; text-align: center; }
+  .reviews .wrap { position: relative; }
+  .reviews .narrow { min-height: 300px; display: flex; flex-direction: column; justify-content: center; padding: 24px; }
   .review { display: none; }
   .review.active { display: block; }
-  .review blockquote { margin: 0 0 1rem; font-size: 1.25rem; font-style: italic; }
-  .review cite { color: var(--muted); font-style: normal; font-size: .9rem; }
-  .carousel-controls { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 2rem; color: var(--muted); }
-  .carousel-controls button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: #fff; font-size: 1.1rem; cursor: pointer; }
-  .carousel-controls button:hover { background: var(--accent); color: #fff; }
+  .review blockquote { margin: 0 0 16px; line-height: 1.75; }
+  .review cite { font-style: normal; font-weight: 600; }
+  .carousel-controls { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 24px; }
+  .carousel-controls button { position: absolute; top: calc(50% + 10px); transform: translateY(-50%); width: 40px; height: 40px; border: 0; background: transparent; color: #fff; font-size: 2rem; cursor: pointer; }
+  .carousel-controls button:hover { background: #0f766e; }
+  #prev { left: 0; }
+  #next { right: 0; }
 
   /* faq */
-  details { border-bottom: 1px solid var(--line); padding: 1.1rem 0; }
-  details:first-of-type { border-top: 1px solid var(--line); }
-  summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+  details { border-bottom: 1px solid #b7b7b7; padding: 24px 0; }
+  details:first-of-type { border-top: 1px solid #b7b7b7; }
+  summary { cursor: pointer; font: 400 1.25rem/1.2 Georgia, "Times New Roman", serif; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
   summary::-webkit-details-marker { display: none; }
-  summary::after { content: "+"; font-size: 1.5rem; line-height: 1; color: var(--accent); }
+  summary::after { content: "+"; flex-shrink: 0; font: 1.5rem/1 system-ui, sans-serif; color: #666; }
   details[open] summary::after { content: "–"; }
-  details p { margin: 1rem 0 0; color: var(--muted); }
+  details p { margin: 1rem 0 0; }
 
-  .benefits { background: var(--soft); text-align: center; }
-  .benefits h4 { padding: .8rem 0; border-bottom: 1px solid var(--line); }
-  .benefits .cta { margin-top: 1.5rem; }
+  .benefits h2 { text-align: left; }
+  .benefits .cta { margin: 48px 0 12px; font-size: 1.25rem; }
 
   /* forms */
-  form { display: grid; gap: 1rem; }
-  label { font-size: .9rem; color: var(--muted); display: block; margin-bottom: .25rem; }
-  input, textarea { width: 100%; padding: .8rem; border: 1px solid #d3c8bf; border-radius: 8px; font: inherit; }
-  input:focus, textarea:focus { outline: 2px solid var(--accent); border-color: transparent; }
-  textarea { min-height: 150px; resize: vertical; }
-  .newsletter { background: var(--soft); text-align: center; }
-  .newsletter form { grid-template-columns: 1fr auto; align-items: end; max-width: 520px; margin: 1rem auto 0; text-align: left; }
-  @media (max-width: 500px) { .newsletter form { grid-template-columns: 1fr; } }
+  form { display: grid; gap: 12px; }
+  #contact { padding-bottom: 112px; }
+  #contact h2 { margin-bottom: 56px; }
+  #contact-form { width: calc(50% - 20px); margin: 0 auto; }
+  .form-field { position: relative; }
+  .form-field label { position: absolute; top: 16px; left: 12px; color: #666; pointer-events: none; }
+  input, textarea { width: 100%; min-height: 56px; padding: 24px 12px 6px; border: 1px solid #ccc; border-radius: 4px; background: #fff; color: #000; font: inherit; }
+  input:focus, textarea:focus { outline: 2px solid #0f766e; outline-offset: 1px; }
+  .form-field:focus-within label,
+  .form-field:has(input:not(:placeholder-shown), textarea:not(:placeholder-shown)) label { top: 4px; font-size: .75rem; }
+  textarea { display: block; min-height: 100px; resize: vertical; }
+  .newsletter { text-align: center; }
+  .newsletter h2 { margin-bottom: 16px; }
+  .newsletter form { grid-template-columns: minmax(0, 1fr) auto; gap: 8px; width: min(100%, 448px); margin: 32px auto 0; text-align: left; }
+  .newsletter button { width: 56px; height: 56px; padding: 0; font-size: 1.5rem; }
+
+  @media (min-width: 1200px) and (max-width: 1399px) { main .wrap { max-width: 1152px; } }
+  @media (min-width: 992px) and (max-width: 1199px) { main .wrap { max-width: 944px; } }
+  @media (min-width: 768px) and (max-width: 991px) { main .wrap { max-width: 720px; } }
+  @media (min-width: 576px) and (max-width: 767px) { main .wrap { max-width: 528px; } }
+  @media (max-width: 991px) {
+    .narrow { width: 100%; }
+    .cards { grid-template-columns: minmax(0, 1fr); }
+    #contact-form { width: 100%; }
+  }
+  @media (max-width: 768px) { .hero .narrow { min-height: 420px; } }
+  @media (max-width: 575px) {
+    main section, main .quote { padding: 32px 24px; }
+    h1 { font-size: 2.125rem; }
+    h2 { font-size: 1.7rem; }
+    .image-banner { height: 160px; }
+    .team img { width: 220px; }
+    #contact { padding-bottom: 80px; }
+    .reviews .narrow { padding: 24px 0; }
+    .carousel-controls button { position: static; transform: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
 
   footer { background: #2c2c2c; box-shadow: inset 0 1px 0 #89857b; color: #fff; padding: 3rem 1.5rem; }
   footer .wrap { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
@@ -157,7 +207,7 @@
 <header>
   <div class="wrap">
     <a href="/"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/logo/d3923081-0502-43bc-8fdd-9ed8843d787b.png" alt="Soul Hug logo"></a>
-    <button id="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
     <nav aria-label="Main navigation">
       <ul id="menu">
         <li><a href="workshops.html">Workshops</a></li>
@@ -173,16 +223,19 @@
 
 <main>
   <section class="hero" id="introduction">
-    <div class="narrow">
+    <div class="wrap">
+      <div class="narrow">
       <h1>Come home to yourself</h1>
       <p>Feeling like you’ve lost touch with who you really are?<br>Our workshops offer a gentle, creative path back to yourself.</p>
       <p>At Soul Hug, we blend the mindfulness of yoga with the healing touch of creative workshops. Join us in Utrecht to slow down, explore, and gently come home to your deeper self, in a safe and supportive space.</p>
       <a class="btn" href="#agenda">See Upcoming Sessions</a>
+      </div>
     </div>
   </section>
 
   <section class="feel">
-    <div class="narrow">
+    <div class="wrap">
+      <div class="narrow">
       <h2>Do you feel...</h2>
       <h4>... like you're missing the spark that used to define you</h4>
       <h4>... you're just going through the motions every day</h4>
@@ -192,6 +245,7 @@
       <h4>... a longing to reconnect with your inner voice</h4>
       <h4>... a longing to connect with like-minded souls</h4>
       <p class="more"><a href="#services"><em>See what Soul Hug can mean to you &gt;&gt;&gt;</em></a></p>
+      </div>
     </div>
   </section>
 
@@ -200,7 +254,7 @@
       <h2>What we offer</h2>
       <div class="cards">
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1567467468694-377c5dc62ec6?w=800&q=80&auto=format&fit=clip" alt="pencil, colors, paper, school" loading="lazy">
+          <div class="service-image"><img src="https://images.unsplash.com/photo-1567467468694-377c5dc62ec6?w=800&q=80&auto=format&fit=clip" alt="pencil, colors, paper, school" loading="lazy"></div>
           <div class="body">
             <h3>The Soul Hug Ateliers</h3>
             <p>Guided creative workshops for self-exploration. A gentle space where you can explore your inner landscape through colour, shape, and imagery, and awaken your intuitive wisdom. No art skills or experience are needed - just your curious heart. Discover how the creative process itself can be deeply transformative when held in a supportive, non-judgmental environment.</p>
@@ -208,7 +262,7 @@
           </div>
         </article>
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1589460647241-8e5d47cfb36d?w=800&q=80&auto=format&fit=clip" alt="Art therapy" loading="lazy">
+          <div class="service-image"><img src="https://images.unsplash.com/photo-1589460647241-8e5d47cfb36d?w=800&q=80&auto=format&fit=clip" alt="Art therapy" loading="lazy"></div>
           <div class="body">
             <h3>Yoga &amp; Art Workshops</h3>
             <p>A space where yoga meets creative expression. Through gentle, mindful movement and guided art explorations, you’ll soften into stillness, listen inward, and give voice to what lives inside. Come as you are - no skills or experience needed, only your curious heart.</p>
@@ -216,7 +270,7 @@
           </div>
         </article>
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=800&q=80&auto=format&fit=clip" alt="woman performing yoga" loading="lazy">
+          <div class="service-image"><img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=800&q=80&auto=format&fit=clip" alt="woman performing yoga" loading="lazy"></div>
           <div class="body">
             <h3>Yoga Classes</h3>
             <p>Join our weekly yoga classes for all levels. A space to slow down, and meet yourself with gentleness. Tune into sensations and feel the presence of your soul. Find your edge with awareness, breathe within challenge. Nurture both strength and softness from a place of presence and love, in a supportive atmosphere.</p>
@@ -224,21 +278,21 @@
           </div>
         </article>
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?w=800&q=80&auto=format&fit=clip" alt="Woman on a log in a lake" loading="lazy">
+          <div class="service-image"><img src="https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?w=800&q=80&auto=format&fit=clip" alt="Woman on a log in a lake" loading="lazy"></div>
           <div class="body">
             <h3>Mindful Walks</h3>
             <p>Do you also long for more nature and don't do it enough? Join us on nature walks, feeling the breeze on your cheeks, the soft ground under your feet, the rejuvenating feeling of being outside. These are free and donation-based, purely for the pleasure of sharing a mindful moment with like-minded souls.</p>
           </div>
         </article>
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&q=80&auto=format&fit=clip" alt="Painted red" loading="lazy">
+          <div class="service-image"><img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&q=80&auto=format&fit=clip" alt="Painted red" loading="lazy"></div>
           <div class="body">
             <h3>Community Events</h3>
             <p>Tea-time, expressive dance, volunteering, ... These moments to connect can take any form. Participate in our community events that promote wellbeing, authenticity, connection and creativity through shared experiences. These gatherings are free and donation-based, perfect for making new friends and exploring new interests.</p>
           </div>
         </article>
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1687783615494-b4a1f1af8b58?w=800&q=80&auto=format&fit=clip" alt="a large room with a lot of yoga mats on the floor" loading="lazy">
+          <div class="service-image"><img src="https://images.unsplash.com/photo-1687783615494-b4a1f1af8b58?w=800&q=80&auto=format&fit=clip" alt="a large room with a lot of yoga mats on the floor" loading="lazy"></div>
           <div class="body">
             <h3>Retreats</h3>
             <p>Join us for immersive retreats combining yoga, art, and more, to nourish mind, body, and spirit. Reconnect with your inner spark and find belonging in a safe, nurturing space that fosters authenticity and kindness.</p>
@@ -248,12 +302,14 @@
     </div>
   </section>
 
-  <section id="agenda" style="background: var(--soft)">
-    <div class="narrow">
+  <section id="agenda">
+    <div class="wrap">
+      <div class="narrow">
       <h2>Agenda</h2>
       <div id="upcoming" class="agenda-list" aria-live="polite"><p class="empty">Loading events...</p></div>
       <a href="#" id="toggle-archive" hidden>See past events</a>
       <div id="archive" class="agenda-list" hidden></div>
+      </div>
     </div>
   </section>
 
@@ -269,7 +325,7 @@
       <h2>Your Facilitator</h2>
       <div class="team">
         <img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/50140e5f-aef6-4f2c-9624-2b11aa33fe3e_1040x1040.webp" alt="Valérie Rossi" loading="lazy">
-        <div>
+        <div class="narrow">
           <h3>Valérie Rossi</h3>
           <p>Soul Hug is my passion project, born from a lifelong love of movement, mindfulness, and free creative expression. I’ve always been drawn to the connection between body, mind, and spirit - from my early years in Belgium practicing karate and later dance, to discovering yoga in my teens and returning to it in 2018 as a source of softness, grounding, and truth.</p>
           <p>As a certified yoga teacher, I bring an embodied and mindful approach to everything I share. My intention is to create a safe and nurturing space where others can slow down, be guided to listen inward and give space to what lies inside, sometimes bringing the unconscious conscious.</p>
@@ -281,8 +337,9 @@
   </section>
 
   <section class="reviews" id="reviews">
-    <div class="narrow">
+    <div class="wrap">
       <h2>What others say</h2>
+      <div class="narrow">
       <div class="review active">
         <blockquote>"I was struck by how interesting the combination of yoga and art therapy was. I feel like I have learned tools that I will embody in my daily practices, deepening my self knowledge and healing process under the guidance of a gentle and welcoming teacher."</blockquote>
         <cite>Yoga &amp; Art Workshop, Utrecht 2024</cite>
@@ -299,6 +356,7 @@
         <blockquote>"Valerie is a really gentle person and this helped to create the safe space that was needed."</blockquote>
         <cite>Self-Exploration Art Workshop, Amersfoort 2023</cite>
       </div>
+      </div>
       <div class="carousel-controls">
         <button id="prev" aria-label="Previous review">←</button>
         <span id="counter">1 / 4</span>
@@ -312,7 +370,8 @@
   </div>
 
   <section id="faq">
-    <div class="narrow">
+    <div class="wrap">
+      <div class="narrow">
       <h2>Frequently Asked Questions</h2>
       <details>
         <summary>I have never painted/drawn (or not for a long time), do I need to have any art skills or experience to participate and enjoy the benefits of this approach?</summary>
@@ -342,11 +401,13 @@
         <summary>Do you offer online sessions?</summary>
         <p>Not at the moment. The heart of Soul Hug lies in being fully present - reconnecting with the “real” world, with your senses and sensations, the textures of materials, and the shared energy of a group in person.</p>
       </details>
+      </div>
     </div>
   </section>
 
   <section class="benefits">
-    <div class="narrow">
+    <div class="wrap">
+      <div class="narrow">
       <h2>Join and reap the benefits - You may feel...</h2>
       <h4>... more self-aware - understanding your needs, emotions, and limits</h4>
       <h4>... more “at home” in your own body and life</h4>
@@ -356,39 +417,42 @@
       <h4>... more present in daily life - truly tasting, sensing, and experiencing the moment</h4>
       <h4>... a gentle sense of joy, curiosity, or aliveness</h4>
       <h4>... a sense of wholeness - living from who you <em>are</em>, not who you think you “should” be</h4>
-      <p class="cta"><a class="btn" href="#agenda">See our Upcoming Sessions</a></p>
+      <p class="cta"><a href="#agenda">See our Upcoming Sessions</a></p>
+      </div>
     </div>
   </section>
 
   <section class="mission" id="mission">
-    <div class="narrow">
+    <div class="wrap">
+      <div class="narrow">
       <h2>Our mission</h2>
       <p>My dream world is a world where people dance hand in hand, skipping away joyfully, a smile on their face, lightness and love in their heart - no less. Each person feels safe in the company of others, as each person knows and embraces who they truly are, strengths and quirkinesses alike.</p>
       <p>My mission is to keep finding my own way home, to acceptance, truth, love and joy, with patience and compassion, and to provide a safe space for others to explore their inner landscape, to get to know their true nature - and who knows, feel that little spark in their heart again :-)</p>
       <p>Big hug,<br>Valerie</p>
+      </div>
     </div>
   </section>
 
   <section id="contact">
-    <div class="narrow">
+    <div class="wrap">
       <h2>Feel free to reach out</h2>
       <form id="contact-form">
-        <div><label for="email">Email address *</label><input type="email" id="email" placeholder="name@example.com" maxlength="5000" required></div>
-        <div><label for="name">Name *</label><input type="text" id="name" placeholder="John Doe" maxlength="5000" required></div>
-        <div><label for="phone">Phone number</label><input type="tel" id="phone" placeholder="123-456-7890" maxlength="5000"></div>
-        <div><label for="message">Message *</label><textarea id="message" placeholder="Enter your message here" maxlength="5000" required></textarea></div>
+        <div class="form-field"><label for="email">Email address *</label><input type="email" id="email" placeholder=" " maxlength="5000" required></div>
+        <div class="form-field"><label for="name">Name *</label><input type="text" id="name" placeholder=" " maxlength="5000" required></div>
+        <div class="form-field"><label for="phone">Phone number</label><input type="tel" id="phone" placeholder=" " maxlength="5000"></div>
+        <div class="form-field"><label for="message">Message *</label><textarea id="message" placeholder=" " maxlength="5000" required></textarea></div>
         <div><button class="btn" type="submit">Contact Us</button></div>
       </form>
     </div>
   </section>
 
   <section class="newsletter" id="newsletter">
-    <div class="narrow">
+    <div class="wrap">
       <h2>Soul Hug Updates</h2>
       <p>Sign up for our email newsletter</p>
       <form id="newsletter-form">
-        <div><label for="newsletter-email">Email</label><input id="newsletter-email" type="email" placeholder="Email" required></div>
-        <button class="btn" type="submit">Sign up</button>
+        <div class="form-field"><label for="newsletter-email">Email</label><input id="newsletter-email" type="email" placeholder=" " required></div>
+        <button class="btn" type="submit" aria-label="Sign up">→</button>
       </form>
     </div>
   </section>
