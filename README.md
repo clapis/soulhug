@@ -26,7 +26,7 @@ The home page also follows the original layout: a light, left-aligned hero, righ
 - [x] `workshops.html` (preserves `#quotebanner-1` and `#quotebanner-2` anchors, linked from the home page service cards)
 - [x] `yoga-classes.html`
 - [x] `inspiration.html` (gallery of 20 images, see `images.csv`)
-- [ ] `terms-and-privacy-policy.html` (linked from the FAQ and footer)
+- [x] `terms-and-privacy-policy.html` (General Conditions + Privacy Policy, linked from the FAQ and footer)
 
 ## Decisions made for `index.html` (reuse for the other pages)
 
@@ -36,7 +36,7 @@ The home page also follows the original layout: a light, left-aligned hero, righ
 - **Palette** (CSS variables): ink `#2b2a33`, muted `#6a6872`, accent `#b5654a`, soft background `#faf5f0`, line `#e9dfd6`.
 - **Content layouts** retain the original white/gray (`#e5e5e5`) backgrounds and teal (`#006059` / `#0f766e`) sections and buttons. Shared header/footer styling stays consistent across migrated pages.
 - **Header/footer/nav** are duplicated per page. Nav: Workshops, Yoga Classes, Agenda, Inspiration, About, Get in touch. Mobile hamburger menu in a few lines of JS.
-- **Links**: migrated pages use `.html` links (`workshops.html`, `yoga-classes.html`, `inspiration.html`) so they work locally without URL rewrites. The unmigrated `terms-and-privacy-policy` page still uses its clean path as on the live site. In-page anchors: `#agenda`, `#services`, `#team`, `#mission`, `#contact`, `#faq`. Note `workshops.html#quotebanner-1` / `#quotebanner-2` must exist on the workshops page.
+- **Links**: migrated pages use `.html` links (`workshops.html`, `yoga-classes.html`, `inspiration.html`, `terms-and-privacy-policy.html`) so they work locally without URL rewrites. In-page anchors: `#agenda`, `#services`, `#team`, `#mission`, `#contact`, `#faq`. Note `workshops.html#quotebanner-1` / `#quotebanner-2` must exist on the workshops page.
 - **Agenda**: fetched from `events.json`, an array of objects with `title`, `date`, `image`, and `link` strings. Events dated before yesterday go under "See past events"; `"date": "weekly"` stays in upcoming. The dates all lie in the past, so the list needs updating (events link to hipsy.nl / momoyoga). Loading failures show a message and a link to Hipsy.
 - **FAQ**: native `<details>/<summary>`. **Reviews**: tiny JS carousel (auto-advances every 9s).
 - **Forms**: there is no backend. Contact and newsletter forms open a `mailto:hello@soulhug.nl` link. Replace with a form service if wanted.
