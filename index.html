@@ -89,7 +89,8 @@
   .agenda-item h3 { font-size: 1.15rem; margin: .1rem 0 .3rem; }
   .agenda-item a { font-size: .9rem; text-decoration: none; }
   #archive .agenda-item { opacity: .55; }
-  #toggle-archive { display: inline-block; margin: 1.5rem 0; }
+  #toggle-archive { display: block; width: fit-content; margin: 1.5rem auto; font-size: .85rem; }
+  #toggle-archive[hidden] { display: none; }
   .empty { text-align: center; color: var(--muted); }
   @media (max-width: 600px) { .agenda-item { flex-direction: column; align-items: flex-start; } .agenda-item img { width: 100%; height: 160px; } }
 
@@ -159,10 +160,10 @@
     <button id="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
     <nav aria-label="Main navigation">
       <ul id="menu">
-        <li><a href="workshops">Workshops</a></li>
-        <li><a href="yoga-classes">Yoga Classes</a></li>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="yoga-classes.html">Yoga Classes</a></li>
         <li><a href="#agenda">Agenda</a></li>
-        <li><a href="inspiration">Inspiration</a></li>
+        <li><a href="inspiration.html">Inspiration</a></li>
         <li><a href="#team">About</a></li>
         <li><a href="#contact">Get in touch</a></li>
       </ul>
@@ -203,7 +204,7 @@
           <div class="body">
             <h3>The Soul Hug Ateliers</h3>
             <p>Guided creative workshops for self-exploration. A gentle space where you can explore your inner landscape through colour, shape, and imagery, and awaken your intuitive wisdom. No art skills or experience are needed - just your curious heart. Discover how the creative process itself can be deeply transformative when held in a supportive, non-judgmental environment.</p>
-            <div><a class="btn" href="workshops#quotebanner-1">Read more</a></div>
+            <div><a class="btn" href="workshops.html#quotebanner-1">Read more</a></div>
           </div>
         </article>
         <article class="card">
@@ -211,7 +212,7 @@
           <div class="body">
             <h3>Yoga &amp; Art Workshops</h3>
             <p>A space where yoga meets creative expression. Through gentle, mindful movement and guided art explorations, you’ll soften into stillness, listen inward, and give voice to what lives inside. Come as you are - no skills or experience needed, only your curious heart.</p>
-            <div><a class="btn" href="workshops#quotebanner-2">Read more</a></div>
+            <div><a class="btn" href="workshops.html#quotebanner-2">Read more</a></div>
           </div>
         </article>
         <article class="card">
@@ -219,7 +220,7 @@
           <div class="body">
             <h3>Yoga Classes</h3>
             <p>Join our weekly yoga classes for all levels. A space to slow down, and meet yourself with gentleness. Tune into sensations and feel the presence of your soul. Find your edge with awareness, breathe within challenge. Nurture both strength and softness from a place of presence and love, in a supportive atmosphere.</p>
-            <div><a class="btn" href="yoga-classes">Read more</a></div>
+            <div><a class="btn" href="yoga-classes.html">Read more</a></div>
           </div>
         </article>
         <article class="card">
@@ -250,8 +251,8 @@
   <section id="agenda" style="background: var(--soft)">
     <div class="narrow">
       <h2>Agenda</h2>
-      <div id="upcoming" class="agenda-list"></div>
-      <a href="#" id="toggle-archive">See past events</a>
+      <div id="upcoming" class="agenda-list" aria-live="polite"><p class="empty">Loading events...</p></div>
+      <a href="#" id="toggle-archive" hidden>See past events</a>
       <div id="archive" class="agenda-list" hidden></div>
     </div>
   </section>
@@ -431,29 +432,6 @@
   setInterval(() => showReview(current + 1), 9000);
 
   // Agenda
-  const events = [
-    { title: "Free Mindful Walk", date: "2025-11-09", image: "https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?w=400&q=80&auto=format&fit=clip", link: "https://hipsy.nl/event/156549-mindful-walk" },
-    { title: "Yoga & Art for Self-Discovery", date: "2025-11-22", image: "https://cdn.hipsy.nl/images/events/156539-b6fdc377-2886-4dd3-bf12-fd05036856fe.jpg", link: "https://hipsy.nl/event/156539-yoga-art-for-self-discovery" },
-    { title: "Yoga & Art for Self-Discovery", date: "2025-12-07", image: "https://cdn.hipsy.nl/images/events/156539-b6fdc377-2886-4dd3-bf12-fd05036856fe.jpg", link: "https://www.momoyoga.com/studionatuurlijk/lesson/28443552/Special-Creative-Yoga-for-Self-Discovery" },
-    { title: "Free Mindful Walk", date: "2025-12-13", image: "https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?w=400&q=80&auto=format&fit=clip", link: "https://hipsy.nl/event/168698-free-mindful-walk-in-nature" },
-    { title: "Find Balance this Holiday Season", date: "2025-12-14", image: "https://cdn.hipsy.nl/images/events/165965-72a0745b-00cf-4076-938d-89c911437cf2.jpg", link: "https://hipsy.nl/event/165965-find-balance-this-holiday-season-creative-self-exploration-workshop" },
-    { title: "Free Mindful Walk", date: "2026-01-10", image: "https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?w=400&q=80&auto=format&fit=clip", link: "https://hipsy.nl/event/168727-free-mindful-walk-in-nature" },
-    { title: "Find your Path into the NY", date: "2026-01-11", image: "https://cdn.hipsy.nl/images/events/165965-72a0745b-00cf-4076-938d-89c911437cf2.jpg", link: "https://hipsy.nl/event/166019-find-your-path-into-the-ny-creative-self-exploration-workshop" },
-    { title: "Free Mindful Walk", date: "2026-03-14", image: "https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?w=400&q=80&auto=format&fit=clip", link: "https://hipsy.nl/event/191431-free-mindful-walk-in-nature" },
-    { title: "The Many Layers of You", date: "2026-03-29", image: "https://cdn.hipsy.nl/images/events/194491-8bf9e393-b854-490d-b021-3291cbcda5cb.jpg", link: "https://hipsy.nl/event/194491-the-many-layers-of-you-creative-self-exploration-workshop" },
-    { title: "Let Yourself Play", date: "2026-04-04", image: "https://cdn.hipsy.nl/images/events/191796-fe218a5d-56d0-4a9e-905e-20cebfdd80c4.jpg", link: "https://hipsy.nl/event/191796-let-yourself-play-intuitive-collage-workshop" },
-    { title: "Free Mindful Walk", date: "2026-04-11", image: "https://images.unsplash.com/photo-1468278848666-4334e6aef2b5?w=400&q=80&auto=format&fit=clip", link: "https://hipsy.nl/event/191468-free-mindful-walk-in-nature" },
-    { title: "How Do You Truly Feel?", date: "2026-04-26", image: "https://cdn.hipsy.nl/images/events/194501-0d7866ca-f694-43a1-bd28-7c3ec76f8848.jpg", link: "https://hipsy.nl/event/194501-how-do-you-truly-feel-creative-self-exploration-workshop" },
-    { title: "Let Yourself Play", date: "2026-05-02", image: "https://cdn.hipsy.nl/images/events/191796-fe218a5d-56d0-4a9e-905e-20cebfdd80c4.jpg", link: "https://hipsy.nl/event/194471-let-yourself-play-intuitive-collage-workshop" },
-    { title: "Free Mindful Walk", date: "2026-05-09", image: "https://cdn.hipsy.nl/images/events/-388a2ca2-6567-4da0-baec-154899f26677.jpg", link: "https://hipsy.nl/event/209965-free-mindful-walk-in-nature" },
-    { title: "Let Yourself Play", date: "2026-05-30", image: "https://cdn.hipsy.nl/images/events/191796-fe218a5d-56d0-4a9e-905e-20cebfdd80c4.jpg", link: "https://hipsy.nl/event/213026-let-yourself-play-intuitive-collage-workshop" },
-    { title: "Free Mindful Walk", date: "2026-06-06", image: "https://cdn.hipsy.nl/images/events/-388a2ca2-6567-4da0-baec-154899f26677.jpg", link: "https://hipsy.nl/event/217419-free-mindful-walk-in-nature" },
-    { title: "What is Your Healthy Place?", date: "2026-06-07", image: "https://cdn.hipsy.nl/images/events/-e673847f-72fb-4fa9-bf1f-7cd8b78dad4e.jpg", link: "https://hipsy.nl/event/213081-what-is-your-healthy-place-creative-self-exploration-workshop" },
-    { title: "How Do You Truly Feel?", date: "2026-06-18", image: "https://cdn.hipsy.nl/images/events/194501-0d7866ca-f694-43a1-bd28-7c3ec76f8848.jpg", link: "https://hipsy.nl/event/214025-how-do-you-truly-feel-creative-self-exploration-workshop" },
-    { title: "Let Yourself Play", date: "2026-07-04", image: "https://cdn.hipsy.nl/images/events/191796-fe218a5d-56d0-4a9e-905e-20cebfdd80c4.jpg", link: "https://hipsy.nl/event/223168-let-yourself-play-intuitive-collage-workshop" },
-    { title: "Yoga Classes", date: "weekly", image: "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=400&q=80&auto=format&fit=clip", link: "yoga-classes" }
-  ];
-
   const escapeHtml = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const validDate = e => !isNaN(new Date(e.date).getTime());
   const fmt = e => validDate(e) ? new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "long", year: "numeric" }).format(new Date(e.date)) : e.date;
@@ -478,9 +456,24 @@
   const toggle = document.getElementById("toggle-archive");
   const byDate = (a, b) => new Date(a.date) - new Date(b.date);
 
-  events.filter(e => !isPast(e)).sort(byDate).forEach(e => upcoming.appendChild(card(e)));
-  events.filter(isPast).sort((a, b) => byDate(b, a)).forEach(e => archive.appendChild(card(e)));
-  if (!upcoming.children.length) upcoming.innerHTML = '<p class="empty">No upcoming sessions scheduled right now.</p>';
+  async function loadEvents() {
+    try {
+      const response = await fetch("events.json");
+      if (!response.ok) throw new Error(`Unable to load events: HTTP ${response.status}`);
+      const events = await response.json();
+      if (!Array.isArray(events) || !events.every(e => e && ["title", "date", "image", "link"].every(key => typeof e[key] === "string" && e[key].trim()))) {
+        throw new Error("Invalid event data in events.json");
+      }
+      upcoming.replaceChildren(...events.filter(e => !isPast(e)).sort(byDate).map(card));
+      archive.replaceChildren(...events.filter(isPast).sort((a, b) => byDate(b, a)).map(card));
+      if (!upcoming.children.length) upcoming.innerHTML = '<p class="empty">No upcoming sessions scheduled right now.</p>';
+      toggle.hidden = false;
+    } catch (error) {
+      console.error("Could not load agenda events.", error);
+      upcoming.innerHTML = '<p class="empty">Unable to load events. Please try again later or <a href="https://hipsy.nl/soulhug">view our events on Hipsy</a>.</p>';
+    }
+  }
+  loadEvents();
 
   toggle.addEventListener("click", ev => {
     ev.preventDefault();

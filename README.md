@@ -9,15 +9,21 @@ Goal: replace the exported website (a Next.js/Bootstrap export from Soloist, in 
 | `download/` | Original exported site (reference only, don't edit). Pages: `index.html`, `workshops.html`, `yoga-classes.html`, `inspiration.html`, `terms-and-privacy-policy.html`, plus `assets/` (Bootstrap, site.css). |
 | `download/images.csv` | Every image URL per page/section (Unsplash + `cdn.soloist.ai`). Use it to find images for the other pages. |
 | `download/contacts.csv` | Contact form submissions from the old site. Contains personal data: do not publish or copy into the site. |
-| `agenda.html` | Original snippet that powered the Agenda embed (JS event list rendered into cards, with a "See past events" toggle). Its event data is now inlined in `index.html`. |
+| `agenda.html` | Original snippet that powered the Agenda embed (reference only). |
+| `events.json` | Event data loaded by the home page agenda. Edit this file to add or update events. |
 | `index.html` | **Done.** New simplified home page (see below). |
+| `workshops.html` | **Done.** Workshop descriptions, original images, booking links to the home agenda, and native FAQ accordions. |
+| `yoga-classes.html` | **Done.** Original circular introduction image, gray schedule section with studio links, and centered facilitator portrait and biography. |
+| `inspiration.html` | **Done.** All 20 original images in alternating two-/three-image desktop rows and two mobile columns, with a native dialog image viewer. |
+
+The workshops page follows the original layout: a centered circular introduction image, alternating flower-masked images and text, bulleted descriptions, and gray/white section backgrounds. It keeps the simplified system/Georgia fonts and shared home-page header/footer.
 
 ## Status
 
 - [x] `index.html` (home)
-- [ ] `workshops.html` (original has `#quotebanner-1` and `#quotebanner-2` anchors, linked from the home page service cards)
-- [ ] `yoga-classes.html`
-- [ ] `inspiration.html` (gallery of 20 images, see `images.csv`)
+- [x] `workshops.html` (preserves `#quotebanner-1` and `#quotebanner-2` anchors, linked from the home page service cards)
+- [x] `yoga-classes.html`
+- [x] `inspiration.html` (gallery of 20 images, see `images.csv`)
 - [ ] `terms-and-privacy-policy.html` (linked from the FAQ and footer)
 
 ## Decisions made for `index.html` (reuse for the other pages)
@@ -27,11 +33,15 @@ Goal: replace the exported website (a Next.js/Bootstrap export from Soloist, in 
 - **Fonts**: Georgia serif for `h1`–`h3`, system sans-serif (`system-ui` stack) for everything else. No web fonts. Small set of sizes (.9 / 1 / 1.15 / 1.25 / 1.4rem). Serif headings were deliberately kept.
 - **Palette** (CSS variables): ink `#2b2a33`, muted `#6a6872`, accent `#b5654a`, soft background `#faf5f0`, line `#e9dfd6`.
 - **Header/footer/nav** are duplicated per page. Nav: Workshops, Yoga Classes, Agenda, Inspiration, About, Get in touch. Mobile hamburger menu in a few lines of JS.
-- **Links**: other pages use clean paths (`workshops`, `yoga-classes`, `inspiration`, `terms-and-privacy-policy`) as on the live site. Locally these need `.html` unless the server rewrites. In-page anchors: `#agenda`, `#services`, `#team`, `#mission`, `#contact`, `#faq`. Note `workshops#quotebanner-1` / `#quotebanner-2` must exist on the workshops page.
-- **Agenda**: JS array `events` in `index.html`, with values written inline (no helper variables). Events dated before yesterday go under "See past events"; `date: "weekly"` stays in upcoming. The dates all lie in the past, so the list needs updating (events link to hipsy.nl / momoyoga).
+- **Links**: migrated pages use `.html` links (`workshops.html`, `yoga-classes.html`, `inspiration.html`) so they work locally without URL rewrites. The unmigrated `terms-and-privacy-policy` page still uses its clean path as on the live site. In-page anchors: `#agenda`, `#services`, `#team`, `#mission`, `#contact`, `#faq`. Note `workshops.html#quotebanner-1` / `#quotebanner-2` must exist on the workshops page.
+- **Agenda**: fetched from `events.json`, an array of objects with `title`, `date`, `image`, and `link` strings. Events dated before yesterday go under "See past events"; `"date": "weekly"` stays in upcoming. The dates all lie in the past, so the list needs updating (events link to hipsy.nl / momoyoga). Loading failures show a message and a link to Hipsy.
 - **FAQ**: native `<details>/<summary>`. **Reviews**: tiny JS carousel (auto-advances every 9s).
 - **Forms**: there is no backend. Contact and newsletter forms open a `mailto:hello@soulhug.nl` link. Replace with a form service if wanted.
 - **Original-only artefacts dropped**: Soloist "This content is not part of the export" notes, the "Powered by Soloist" footer link, and the cookie message.
+
+## Local preview
+
+Run `python3 -m http.server 8000` from the repository root and open `http://localhost:8000`. The agenda fetches `events.json`, so opening `index.html` directly via `file://` is not supported.
 
 ## Open points / ideas
 

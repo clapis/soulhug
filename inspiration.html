@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inspiration - Soul Hug</title>
+<meta name="description" content="Feeling like you’ve lost touch with who you really are? Our workshops offer a gentle, creative path back to yourself. At Soul Hug, we blend the mindfulness of yoga with the healing touch of creative workshops. Join us in Utrecht to slow down, explore, and gently come home to your deeper self, in a safe and supportive space.">
+<meta name="keywords" content="community, yoga, art, therapy, mindfulness, meditation, workshop, utrecht, netherlands">
+<meta name="author" content="Soul Hug">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Inspiration - Soul Hug">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://soulhug.nl/inspiration">
+<meta property="og:image" content="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/fbab7517-80d3-427d-9703-af3b2fa919a5_2048x2048.webp?w=1200">
+<link rel="icon" href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/logo/dfd75154-6493-4d0f-b064-4a58815bda2b.ico">
+<link rel="canonical" href="https://soulhug.nl/inspiration">
+<style>
+  :root {
+    --ink: #2b2a33;
+    --muted: #6a6872;
+    --accent: #b5654a;
+    --accent-dark: #8f4a33;
+    --soft: #faf5f0;
+    --line: #e9dfd6;
+    --max: 1100px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body { margin: 0; font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--ink); background: #fff; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--accent); }
+  a:hover { color: var(--accent-dark); }
+  h1 { font: 400 2rem/1.2 Georgia, "Times New Roman", serif; text-align: center; margin: 0 0 32px; }
+  .wrap { max-width: var(--max); margin: 0 auto; }
+
+  header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.95); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; padding: .6rem 1.25rem; }
+  header img { height: 48px; width: auto; }
+  nav ul { display: flex; gap: 1.6rem; list-style: none; margin: 0; padding: 0; }
+  nav a { color: var(--ink); text-decoration: none; font-size: .9rem; }
+  nav a:hover, nav a[aria-current="page"] { color: var(--accent); }
+  #menu-toggle { display: none; background: none; border: 0; font-size: 1.8rem; cursor: pointer; color: var(--ink); }
+  @media (max-width: 800px) {
+    #menu-toggle { display: block; }
+    nav ul { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: #fff; border-bottom: 1px solid var(--line); }
+    nav ul.open { display: flex; }
+    nav li a { display: block; padding: .9rem 1.25rem; }
+  }
+
+  main { font-size: 16px; line-height: 1.5; color: #000; }
+  main section { padding: 64px 24px; }
+  main .wrap { max-width: 1352px; }
+  .gallery { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .gallery a { grid-column: span 2; padding: 4px; }
+  .gallery a:nth-child(5n+1), .gallery a:nth-child(5n+2) { grid-column: span 3; }
+  .gallery .frame { display: block; aspect-ratio: 4/3; overflow: hidden; border-radius: 4px; }
+  .gallery img { width: 100%; height: auto; transform-origin: top left; }
+  .gallery a:hover .frame { filter: brightness(.85); }
+  .gallery a:focus-visible { outline: 2px solid #0f766e; outline-offset: -2px; }
+  .gallery a:nth-child(18) img { transform: translateX(-3.2786885245901667%) scale(1.0655737704918034); }
+  .gallery a:nth-child(19) img { transform: translateX(-2.845528455284552%) scale(1.056910569105691); }
+  .gallery a:nth-child(20) img { transform: translateX(-.19305019305019788%) scale(1.003861003861004); }
+  @media (min-width: 1200px) and (max-width: 1399px) { main .wrap { max-width: 1152px; } }
+  @media (min-width: 992px) and (max-width: 1199px) { main .wrap { max-width: 944px; } }
+  @media (min-width: 768px) and (max-width: 991px) { main .wrap { max-width: 720px; } }
+  @media (min-width: 576px) and (max-width: 767px) { main .wrap { max-width: 528px; } }
+  @media (max-width: 991px) { .gallery a { grid-column: span 3; } }
+  @media (max-width: 575px) {
+    main section { padding: 32px 24px; }
+    h1 { font-size: 1.7rem; }
+  }
+
+  #lightbox { width: 100vw; max-width: none; height: 100dvh; max-height: none; margin: 0; padding: 16px; border: 0; background: #111; color: #fff; }
+  #lightbox[open] { display: flex; flex-direction: column; }
+  #lightbox::backdrop { background: #000; }
+  body:has(#lightbox[open]) { overflow: hidden; }
+  .lightbox-toolbar { display: flex; align-items: center; justify-content: space-between; }
+  #lightbox button { width: 44px; height: 44px; padding: 0; background: transparent; color: #fff; border: 0; font: inherit; font-size: 1.8rem; cursor: pointer; }
+  #lightbox button:hover { background: #333; }
+  #lightbox button:focus-visible { outline: 2px solid #fff; }
+  .lightbox-view { position: relative; display: flex; align-items: center; justify-content: center; flex: 1; min-height: 0; }
+  #previous-image, #next-image { position: absolute; top: 50%; transform: translateY(-50%); }
+  #previous-image { left: 0; }
+  #next-image { right: 0; }
+  #lightbox-image { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+
+  footer { background: #2c2c2c; box-shadow: inset 0 1px 0 #89857b; color: #fff; padding: 3rem 1.5rem; }
+  footer .wrap { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+  footer ul { list-style: none; display: flex; gap: 1.5rem; margin: 0 0 1rem; padding: 0; flex-wrap: wrap; justify-content: center; }
+  footer a { color: #fff; text-decoration: none; font-weight: 500; line-height: 1.5; }
+  footer a:hover { opacity: .7; text-decoration: none; color: #fff; }
+  footer .copy { line-height: 1.5; }
+  footer .badge { display: block; height: 160px; width: auto; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="/"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/logo/d3923081-0502-43bc-8fdd-9ed8843d787b.png" alt="Soul Hug logo"></a>
+    <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <nav aria-label="Main navigation">
+      <ul id="menu">
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="yoga-classes.html">Yoga Classes</a></li>
+        <li><a href="index.html#agenda">Agenda</a></li>
+        <li><a href="inspiration.html" aria-current="page">Inspiration</a></li>
+        <li><a href="/#team">About</a></li>
+        <li><a href="/#contact">Get in touch</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="gallery-1">
+    <div class="wrap">
+      <h1>No talent needed, only your open heart :-)</h1>
+      <div class="gallery">
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/fbab7517-80d3-427d-9703-af3b2fa919a5_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/fbab7517-80d3-427d-9703-af3b2fa919a5_2048x2048.webp?w=800" alt="Journal collage of people, movement, and nature"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/6dd7c2f5-888a-4ee7-871a-c5d5a9a847f5_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/6dd7c2f5-888a-4ee7-871a-c5d5a9a847f5_2048x2048.webp?w=800" alt="Blue flowers and green branches drawn on graph paper"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/4f93ba77-f532-4e4c-8bc8-146a752481c0_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/4f93ba77-f532-4e4c-8bc8-146a752481c0_2048x2048.webp?w=800" alt="Expressive lines and flowers in coloured pencil" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/a879ad32-7d9d-49ae-bd33-bba283f5ca7d_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/a879ad32-7d9d-49ae-bd33-bba283f5ca7d_2048x2048.webp?w=800" alt="Red and grey expressive face painting" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/a19d428a-792f-43d5-ad2f-00396ea23c87_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/a19d428a-792f-43d5-ad2f-00396ea23c87_2048x2048.webp?w=800" alt="Pencil drawing of flowing plant shapes" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/f701e11a-d422-4af0-ba4d-a8589843fa9e_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/f701e11a-d422-4af0-ba4d-a8589843fa9e_2048x2048.webp?w=800" alt="Collage reading 'It doesn't need to make sense'" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/04b31683-b8ab-469f-8aac-67d2e3b8131a_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/04b31683-b8ab-469f-8aac-67d2e3b8131a_2048x2048.webp?w=800" alt="Collage reading 'It doesn't need to be pretty'" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/4f862ba5-6aad-4bf8-b92d-aa4fd0f7a7a2_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/4f862ba5-6aad-4bf8-b92d-aa4fd0f7a7a2_2048x2048.webp?w=800" alt="Yellow circular drawing with intertwined flowing lines" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/1b75c571-2ce4-43a0-a683-2d08cdd89e2a_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/1b75c571-2ce4-43a0-a683-2d08cdd89e2a_2048x2048.webp?w=800" alt="Abstract painting with a colourful square and musical notes" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/fb2c8054-f078-405d-9ccc-12054c94854d_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/fb2c8054-f078-405d-9ccc-12054c94854d_2048x2048.webp?w=800" alt="Portrait drawing surrounded by hearts and flowers" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/45fcd385-32e8-4982-860a-d494210ab043_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/45fcd385-32e8-4982-860a-d494210ab043_2048x2048.webp?w=800" alt="Colourfully decorated masks on a cloth" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/61f0260d-0c55-42bc-a902-a528c4b8a866_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/61f0260d-0c55-42bc-a902-a528c4b8a866_2048x2048.webp?w=800" alt="Painted masks showing different colours and expressions" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/83cbdb49-2116-46e5-8d52-732d5da2e726_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/83cbdb49-2116-46e5-8d52-732d5da2e726_2048x2048.webp?w=800" alt="Abstract coloured shapes across an open sketchbook" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/2eaa73f6-21ea-434f-afac-60f4215beddc_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/2eaa73f6-21ea-434f-afac-60f4215beddc_2048x2048.webp?w=800" alt="Orange and black spiral with a blue teardrop" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/962fb21a-d862-411c-a14b-bf3ccc3f992e_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/962fb21a-d862-411c-a14b-bf3ccc3f992e_2048x2048.webp?w=800" alt="Vision board collage with words including passion and play" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/3c66f979-081a-4eaa-942e-1b5ace321963_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/3c66f979-081a-4eaa-942e-1b5ace321963_2048x2048.webp?w=800" alt="Miniature woodland sculpture with a blue river" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/4659a80b-5e38-400e-b6fd-fb14f020c20c_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/4659a80b-5e38-400e-b6fd-fb14f020c20c_2048x2048.webp?w=800" alt="Close-up of trees in a miniature woodland sculpture" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/59b011bd-eeb4-4171-bdce-44638d2faacc_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/59b011bd-eeb4-4171-bdce-44638d2faacc_2048x2048.webp?w=800" alt="Abstract grey and pink flowing shapes" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/21cd6b44-4260-4d15-bc94-f90b4bf558ef_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/21cd6b44-4260-4d15-bc94-f90b4bf558ef_2048x2048.webp?w=800" alt="Blue and green circles among curved orange shapes" loading="lazy"></span>
+        </a>
+        <a href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/3ab188b1-3161-47a7-8fee-28748701b65f_2048x2048.webp">
+          <span class="frame"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/3ab188b1-3161-47a7-8fee-28748701b65f_2048x2048.webp?w=800" alt="Circular drawing of waves with blue, yellow, and red details" loading="lazy"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dialog id="lightbox" aria-label="Inspiration gallery">
+  <div class="lightbox-toolbar">
+    <span id="image-counter" aria-live="polite"></span>
+    <button id="close-lightbox" type="button" aria-label="Close gallery">&times;</button>
+  </div>
+  <div class="lightbox-view">
+    <button id="previous-image" type="button" aria-label="Previous image">&larr;</button>
+    <img id="lightbox-image" alt="">
+    <button id="next-image" type="button" aria-label="Next image">&rarr;</button>
+  </div>
+</dialog>
+
+<footer>
+  <div class="wrap">
+    <a href="https://hipsy.nl/soulhug" target="_blank" rel="noopener"><img class="badge" src="https://cdn.hipsy.nl/images/review/18250-akm8ejts-sticker-green.png" alt="Reviews on Hipsy" loading="lazy"></a>
+    <div class="info">
+      <ul>
+        <li><a href="/#team">About</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="terms-and-privacy-policy">Terms &amp; Privacy</a></li>
+      </ul>
+      <div class="copy">© 2026 Soul Hug</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menu = document.getElementById("menu");
+  const menuToggle = document.getElementById("menu-toggle");
+  menuToggle.addEventListener("click", () => {
+    const open = menu.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", open);
+  });
+  menu.addEventListener("click", () => { menu.classList.remove("open"); menuToggle.setAttribute("aria-expanded", false); });
+
+  const images = [...document.querySelectorAll(".gallery a")];
+  const lightbox = document.getElementById("lightbox");
+  const viewerImage = document.getElementById("lightbox-image");
+  const counter = document.getElementById("image-counter");
+  let current = 0;
+  const showImage = index => {
+    current = (index + images.length) % images.length;
+    viewerImage.src = images[current].href;
+    viewerImage.alt = images[current].querySelector("img").alt;
+    counter.textContent = `Image ${current + 1} of ${images.length}`;
+  };
+  images.forEach((link, index) => {
+    link.addEventListener("click", event => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      showImage(index);
+      lightbox.showModal();
+    });
+  });
+  document.getElementById("close-lightbox").addEventListener("click", () => lightbox.close());
+  document.getElementById("previous-image").addEventListener("click", () => showImage(current - 1));
+  document.getElementById("next-image").addEventListener("click", () => showImage(current + 1));
+  lightbox.addEventListener("click", event => { if (event.target === lightbox) lightbox.close(); });
+  lightbox.addEventListener("keydown", event => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      showImage(current + (event.key === "ArrowRight" ? 1 : -1));
+    }
+  });
+</script>
+</body>
+</html>

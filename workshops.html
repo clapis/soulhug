@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workshops - Soul Hug</title>
+<meta name="description" content="Feeling like you’ve lost touch with who you really are? Our workshops offer a gentle, creative path back to yourself. At Soul Hug, we blend the mindfulness of yoga with the healing touch of creative workshops. Join us in Utrecht to slow down, explore, and gently come home to your deeper self, in a safe and supportive space.">
+<meta name="keywords" content="community, yoga, art, therapy, mindfulness, meditation, workshop, utrecht, netherlands">
+<meta name="author" content="Soul Hug">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Workshops - Soul Hug">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://soulhug.nl/workshops">
+<meta property="og:image" content="https://images.unsplash.com/photo-1589460647241-8e5d47cfb36d?w=1200&amp;q=85&amp;fm=jpg">
+<link rel="icon" href="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/logo/dfd75154-6493-4d0f-b064-4a58815bda2b.ico">
+<link rel="canonical" href="https://soulhug.nl/workshops">
+<style>
+  :root {
+    --ink: #2b2a33;
+    --muted: #6a6872;
+    --accent: #b5654a;
+    --accent-dark: #8f4a33;
+    --soft: #faf5f0;
+    --line: #e9dfd6;
+    --max: 1100px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body { margin: 0; font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--ink); background: #fff; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--accent); }
+  a:hover { color: var(--accent-dark); }
+  h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.2; margin: 0; font-weight: 600; }
+  h1 { font-size: clamp(2.4rem, 6vw, 4rem); margin-bottom: 1.2rem; }
+  h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1.5rem; text-align: center; }
+  p { margin: 0 0 1em; }
+  section { padding: 5rem 1.25rem; }
+  .wrap { max-width: var(--max); margin: 0 auto; }
+  .narrow { max-width: 760px; margin: 0 auto; }
+  .btn { display: inline-block; background: var(--accent); color: #fff; padding: .8rem 1.6rem; border: 0; border-radius: 999px; font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; transition: background .2s; }
+  .btn:hover { background: var(--accent-dark); color: #fff; }
+
+  header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.95); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; padding: .6rem 1.25rem; }
+  header img { height: 48px; width: auto; }
+  nav ul { display: flex; gap: 1.6rem; list-style: none; margin: 0; padding: 0; }
+  nav a { color: var(--ink); text-decoration: none; font-size: .9rem; }
+  nav a:hover, nav a[aria-current="page"] { color: var(--accent); }
+  #menu-toggle { display: none; background: none; border: 0; font-size: 1.8rem; cursor: pointer; color: var(--ink); }
+  @media (max-width: 800px) {
+    #menu-toggle { display: block; }
+    nav ul { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: #fff; border-bottom: 1px solid var(--line); }
+    nav ul.open { display: flex; }
+    nav li a { display: block; padding: .9rem 1.25rem; }
+  }
+
+  main { font-size: 16px; line-height: 1.5; color: #000; }
+  main section { padding: 64px 24px; }
+  main .wrap { max-width: 1352px; }
+  main h1, main h2 { font-size: 2rem; font-weight: 400; }
+  .intro { display: flex; flex-direction: column; align-items: center; gap: 48px; text-align: center; }
+  .intro img { width: 33.333333%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
+  .intro .copy { width: 66.666667%; }
+  .intro h1 { margin-bottom: 32px; }
+  .workshop { background: #e5e5e5; }
+  .workshop + .workshop { background: #fff; }
+  .workshop .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 39px; align-items: center; }
+  .workshop img { width: 100%; aspect-ratio: 1; object-fit: cover;
+    --flower-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='30' cy='30' r='30'/%3E%3Ccircle cx='70' cy='30' r='30'/%3E%3Ccircle cx='30' cy='70' r='30'/%3E%3Ccircle cx='70' cy='70' r='30'/%3E%3C/svg%3E");
+    -webkit-mask-image: var(--flower-mask);
+    mask-image: var(--flower-mask);
+    mask-size: 100% 100%; mask-repeat: no-repeat; }
+  .workshop h2 { text-align: inherit; margin-bottom: 12px; }
+  .workshop .subtitle { font-size: 1.25rem; margin-bottom: 12px; }
+  .workshop ul { padding-left: 1.4em; margin: 0 0 1em; }
+  .workshop .cta { margin: 24px 0; }
+  .workshop .btn { background: #0f766e; border-radius: 4px; padding: .5rem 1rem; font-weight: 400; }
+  .workshop .btn:hover { background: #00635c; }
+  .workshop-reverse { text-align: right; }
+  .workshop-reverse .copy { grid-column: 1; grid-row: 1; }
+  .workshop-reverse ul { list-style-position: inside; padding-left: 0; }
+
+  .faq { background: #e5e5e5; }
+  .faq .narrow { max-width: 66.666667%; }
+  .faq h2 { margin-bottom: 32px; }
+  details { border-bottom: 1px solid #b7b7b7; padding: 24px 0; }
+  details:first-of-type { border-top: 1px solid #b7b7b7; }
+  summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: 1.5rem; line-height: 1; color: var(--accent); }
+  details[open] summary::after { content: "–"; }
+  details p { margin: 1rem 0 0; }
+  .faq a { color: #00635c; }
+  @media (min-width: 1200px) and (max-width: 1399px) { main .wrap { max-width: 1152px; } }
+  @media (min-width: 992px) and (max-width: 1199px) { main .wrap { max-width: 944px; } }
+  @media (min-width: 768px) and (max-width: 991px) { main .wrap { max-width: 720px; } }
+  @media (min-width: 576px) and (max-width: 767px) { main .wrap { max-width: 528px; } }
+  @media (max-width: 991px) {
+    .intro img { width: 50%; }
+    .intro .copy, .faq .narrow { width: 100%; max-width: none; }
+    .workshop .wrap { grid-template-columns: minmax(0, 1fr); gap: 48px; }
+    .workshop img { max-width: 656px; margin: 0 auto; }
+  }
+  @media (max-width: 575px) {
+    main section { padding: 32px 24px; }
+    main h1, main h2 { font-size: 1.7rem; }
+  }
+
+  footer { background: #2c2c2c; box-shadow: inset 0 1px 0 #89857b; color: #fff; padding: 3rem 1.5rem; }
+  footer .wrap { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+  footer ul { list-style: none; display: flex; gap: 1.5rem; margin: 0 0 1rem; padding: 0; flex-wrap: wrap; justify-content: center; }
+  footer a { color: #fff; text-decoration: none; font-weight: 500; line-height: 1.5; }
+  footer a:hover { opacity: .7; text-decoration: none; color: #fff; }
+  footer .copy { line-height: 1.5; }
+  footer .badge { display: block; height: 160px; width: auto; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="/"><img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/logo/d3923081-0502-43bc-8fdd-9ed8843d787b.png" alt="Soul Hug logo"></a>
+    <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <nav aria-label="Main navigation">
+      <ul id="menu">
+        <li><a href="workshops.html" aria-current="page">Workshops</a></li>
+        <li><a href="yoga-classes.html">Yoga Classes</a></li>
+        <li><a href="index.html#agenda">Agenda</a></li>
+        <li><a href="inspiration.html">Inspiration</a></li>
+        <li><a href="/#team">About</a></li>
+        <li><a href="/#contact">Get in touch</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="article-1">
+    <div class="wrap intro">
+      <img src="https://images.unsplash.com/photo-1589460647241-8e5d47cfb36d?w=800&amp;q=80&amp;auto=format&amp;fit=clip" alt="Art therapy">
+      <div class="copy">
+        <h1>Join a Workshop - Give your Soul a Hug</h1>
+        <p>Our sessions create a warm, welcoming space where you can reconnect with yourself and others.</p>
+        <p>Join a (Yoga and) Art Workshop to nurture your soul, gain insights, express emotions that words can't, tap into your intuitive wisdom and nourish your creativity. All helping you cultivate a lifestyle that resonates beyond the mat or canvas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="workshop" id="quotebanner-1">
+    <div class="wrap">
+      <img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/edacb8df-bb9e-48c1-bbb9-8d4f23c8d97c_2048x2048.webp?w=1000" alt="The Soul Hug Ateliers" loading="lazy">
+      <div class="copy">
+        <h2>The Soul Hug Ateliers</h2>
+        <p class="subtitle">Creative workshops for Self-Exploration</p>
+        <p>These workshops provide a safe and supportive environment where creativity becomes a tool for self-exploration and healing.</p>
+        <ul>
+          <li>By playing with materials, colours and shapes, and by observing your own art expressions you can begin to look into yourself for meaning and insight.</li>
+          <li>Making art can help you explore aspects of yourself that remain hidden in your unconscious, or express thoughts and feelings that may be complex to convey with words.</li>
+          <li>It can support emotional release, reduce stress and anxiety, and increase your self-awareness, confidence and inner peace.</li>
+          <li>No experience or talent needed, it's all about the process!</li>
+          <li>Each workshop is offered around a specific theme.</li>
+        </ul>
+        <p class="cta"><a class="btn" href="/#agenda">See our Upcoming Sessions</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="workshop workshop-reverse" id="quotebanner-2">
+    <div class="wrap">
+      <img src="https://cdn.soloist.ai/2d26cbf1-b6c7-49b7-8204-e04fd598c48b/99ab8083-b4b3-4bda-a4f0-4e82b2db695e_2048x2048.webp?w=1000" alt="Yoga &amp; Art Workshops" loading="lazy">
+      <div class="copy">
+        <h2>Yoga &amp; Art Workshops</h2>
+        <p class="subtitle">Yoga &amp; Creativity for Self-Exploration</p>
+        <p>These workshops combine the calming practice of yoga with the creative power of expressive arts.</p>
+        <ul>
+          <li>You will be guided through a gentle yoga practice to ground your body and mind, blended with art therapy-inspired explorations.</li>
+          <li>The calming effects of yoga support the creative flow of the expressive art explorations, helping you reveal your inner landscape through colour, shape, and imagery.</li>
+          <li>You will enjoy a supportive, non-judgmental space where you can cultivate a deep inner listening, create, reflect, and tap into your inner wisdom.</li>
+          <li>No experience or talent needed, it's all about the process!</li>
+          <li>Each workshop is offered around a specific theme.</li>
+        </ul>
+        <p class="cta"><a class="btn" href="/#agenda">See our Upcoming Sessions</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="narrow">
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>How do I book a workshop?</summary>
+        <p>Simply click on the workshop listed in our <a href="/#agenda">agenda</a>. You’ll be redirected to the event page on Hipsy, where you can read the full description and book your spot directly.</p>
+      </details>
+      <details>
+        <summary>What should I bring with me?</summary>
+        <p>Wear comfortable clothes you can move and relax in. Bring a water bottle, a journal and pen, and anything that helps you feel cozy. If you’d like, you can also bring some favourite art materials, but everything essential will be available to share.</p>
+      </details>
+      <details>
+        <summary>Can I offer a workshop as a gift? Do you offer private workshops or collaborations?</summary>
+        <p>Yes - we love creating special experiences :-) Whether you would like to offer a workshop as a gift, organise a private session for a small group, or collaborate for a company or retreat event, we’re happy to discuss the possibilities. Just reach out via our <a href="/#contact">contact form</a> or via email <a href="mailto:hello@soulhug.nl">hello@soulhug.nl</a>.</p>
+      </details>
+      <details>
+        <summary>I’m shy or not very expressive - will I still feel comfortable?</summary>
+        <p>These sessions are designed as safe, gentle spaces where everyone comes as they are. You can decide how comfortable you feel with that type of environment, but just know that there is no pressure to perform or share anything - just an invitation to explore at your own pace.</p>
+      </details>
+      <details>
+        <summary>Are your workshops suitable if I’m going through a difficult emotional period?</summary>
+        <p>Our workshops can offer a soothing space to reconnect with yourself and express emotions creatively. However, they are not a substitute for therapy. If you’re currently navigating deep trauma, PTSD, or acute emotional distress, we recommend working with a qualified therapist alongside.</p>
+      </details>
+      <details>
+        <summary>What makes this approach different from traditional yoga or art therapy?</summary>
+        <p>Our sessions combine mindful movement and creative exploration in a unique way. Rather than focusing on technique or analysis, the aim is to explore how your body, breath, and creativity naturally connect - helping you feel more present, grounded, and alive.</p>
+      </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="https://hipsy.nl/soulhug" target="_blank" rel="noopener"><img class="badge" src="https://cdn.hipsy.nl/images/review/18250-akm8ejts-sticker-green.png" alt="Reviews on Hipsy" loading="lazy"></a>
+    <div class="info">
+      <ul>
+        <li><a href="/#team">About</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="terms-and-privacy-policy">Terms &amp; Privacy</a></li>
+      </ul>
+      <div class="copy">© 2026 Soul Hug</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menu = document.getElementById("menu");
+  const menuToggle = document.getElementById("menu-toggle");
+  menuToggle.addEventListener("click", () => {
+    const open = menu.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", open);
+  });
+  menu.addEventListener("click", () => { menu.classList.remove("open"); menuToggle.setAttribute("aria-expanded", false); });
+</script>
+</body>
+</html>
