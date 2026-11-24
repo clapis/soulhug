@@ -1,0 +1,16 @@
+<header>
+  <div class="wrap">
+    <a href="index.html"><img src="assets/images/logo.png" alt="Soul Hug logo"></a>
+    <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <nav aria-label="Main navigation">
+      <ul id="menu">
+        <li><a href="workshops.html"{% if page.nav == "workshops" %} aria-current="page"{% endif %}>Workshops</a></li>
+        <li><a href="yoga-classes.html"{% if page.nav == "yoga-classes" %} aria-current="page"{% endif %}>Yoga Classes</a></li>
+        <li><a href="index.html#agenda">Agenda</a></li>
+        <li><a href="inspiration.html"{% if page.nav == "inspiration" %} aria-current="page"{% endif %}>Inspiration</a></li>
+        <li><a href="index.html#team">About</a></li>
+        <li><a href="index.html#contact">Get in touch</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

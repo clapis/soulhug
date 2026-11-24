@@ -1,0 +1,14 @@
+url: https://soulhug.nl
+description: "Feeling like you\u2019ve lost touch with who you really are? Our workshops offer a gentle, creative path back to yourself. At Soul Hug, we blend the mindfulness of yoga with the healing touch of creative workshops. Join us in Utrecht to slow down, explore, and gently come home to your deeper self, in a safe and supportive space."
+keywords: "community, yoga, art, therapy, mindfulness, meditation, workshop, utrecht, netherlands"
+exclude:
+  - solo-backup
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "v2"
+    values:
+      layout: v2

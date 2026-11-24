@@ -1,0 +1,24 @@
+.intro > img { height: auto; aspect-ratio: 4 / 3; max-height: 380px; }
+.workshop-types { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 40px; }
+.workshop-types article { padding-top: 24px; border-top: 1px solid var(--line); scroll-margin-top: 110px; }
+.workshop-heading { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
+.workshop-heading img { width: 96px; height: 80px; flex-shrink: 0; object-fit: cover; padding: 4px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); }
+.workshop-heading .eyebrow { margin-bottom: 8px; }
+.workshop-heading h3 { margin-bottom: 0; }
+.workshop-booking { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 32px; margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); }
+.workshop-booking p { margin-bottom: 8px; }
+.workshop-booking .booking-note { max-width: 65ch; margin-bottom: 0; color: var(--muted); text-wrap: pretty; }
+.art-preview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 32px 0; }
+.art-preview img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 8px; }
+@media (max-width: 800px) {
+  .workshop-booking { grid-template-columns: 1fr; gap: 24px; }
+  .workshop-booking .btn { justify-self: start; }
+}
+@media (max-width: 575px) {
+  .workshop-heading { gap: 16px; }
+  .workshop-heading img { width: 72px; height: 64px; }
+  .intro > img { max-height: 280px; }
+  .workshop-types { grid-template-columns: 1fr; gap: 32px; }
+  .art-preview { grid-template-columns: 1fr; }
+  .art-preview img { max-height: 320px; }
+}
